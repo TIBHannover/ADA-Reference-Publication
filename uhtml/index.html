@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Benchmark Report</title>
+    <link type="text/css" rel="stylesheet" href="css/book.css" />
+    <style>
+      a.fn {
+        -adapt-template: url(data:application/xml,%3Chtml%20xmlns=%22http://www.w3.org/1999/xhtml%22%20xmlns:s=%22http://www.pyroxy.com/ns/shadow%22%3E%3Chead%3E%3Cstyle%3E.footnote-content%7Bfloat:footnote%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Cs:template%20id=%22footnote%22%3E%3Cs:content/%3E%3Cs:include%20class=%22footnote-content%22/%3E%3C/s:template%3E%3C/body%3E%3C/html%3E#footnote);
+        text-decoration: none;
+        color: inherit;
+        vertical-align: baseline;
+        font-size: 70%;
+        position: relative;
+        top: -0.3em;
+      }
+      body {
+        background-color: white;
+      }
+      section[role=doc-footnote] .footnote-counter:after {
+        content: ". ";
+      }
+      section.fnlist {
+        display: none;
+      }
+      section:footnote-content {
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+      }
+      .table-of-contents a {
+        display: inline-flex;
+        width: 100%;
+        text-decoration: none;
+        color: currentColor;
+        break-inside: avoid;
+        align-items: baseline;
+      }
+      .table-of-contents a::before {
+        margin-left: 1px;
+        margin-right: 1px;
+        border-bottom: solid 1px lightgray;
+        content: "";
+        order: 1;
+        flex: auto;
+      }
+      .table-of-contents a::after {
+        text-align: right;
+        content: target-counter(attr(href, url), page);
+        align-self: flex-end;
+        flex: none;
+        order: 2;
+      }
+      @page {
+        size: 6in 9in;
+        @top-center {
+          content: env(doc-title);
+        }
+        @bottom-center {
+          content: counter(page);
+        }
+      }
+      @page :first {
+        @bottom-center {
+          content: normal;
+        }
+        @top-center {
+          content: normal;
+        }
+      }
+      figure img {
+        max-width: 100%;
+      }
+      .article-title {
+        page-break-before: right;
+      }
+      h1.part {
+        page-break-before: right;
+      }
+      .copyrightpage {
+        page-break-before: left;
+      }
+      .tocpage {
+        page-break-before: right;
+      }
+      .booktitle {
+        text-align: center;
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href="css/rki.css" />
+  </head>
+  <body class="user-contents">
+    <div class="titlepage frontmatter">
+      <h1 class="booktitle">Benchmark Report</h1>
+      <h2 class="booksubtitle">Test Publication for Pipeline</h2>
+      <h3 class="bookauthor">by Author A Name</h3>
+    </div>
+    <div class="copyrightpage frontmatter">
+      <p>Published by: A Publisher</p>
+      <p>Last Updated: 1636127131</p>
+      <p>Created: 1633533561</p>
+      <p>Language: English</p>
+      <p>Created by: Simon Worthington</p>
+    </div>
+    <div class="tocpage frontmatter">
+      <nav role="doc-toc">
+        <ol>
+          <li>
+            <a href="#_1_0">
+              section-frontmatter
+            </a>
+            <ol>
+              <li>
+                <a href="#_1_0">
+                  Copyright Page
+                </a>
+              </li>
+              <li>
+                <a href="#_2_0">
+                  Acknowledgements
+                </a>
+              </li>
+              <li>
+                <a href="#_3_0">
+                  Contributors
+                </a>
+              </li>
+              <li>
+                <a href="#_4_0">
+                  Foreword
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_5_0">
+              section-booktext
+            </a>
+            <ol>
+              <li>
+                <a href="#_5_0">
+                  Text Section (Chapter 1)
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H8148042">
+                      Subtitle (inserted text): One of three test sections.
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H1003956">
+                          What you will find in this section:
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H1581297">
+                          Start of text
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H2736763">
+                              Lists
+                            </a>
+                            <ol>
+                              <li>
+                                <a href="#H1860783">
+                                  Ordered list:
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H3077438">
+                                  Indented Ordered list:
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H8642363">
+                                  Ordered list:
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H6844251">
+                                  Ordered list two - with start number set as 5 using the Fidus Writer setting:
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H8647294">
+                                  Indented ordered list
+                                </a>
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            <a href="#H1635418">
+                              Text
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H6880234">
+                              Headers and normal text styles
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H4490657">
+                      Header 1
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H8419696">
+                          Header 2
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H8916798">
+                              Header 3
+                            </a>
+                            <ol>
+                              <li>
+                                <a href="#H7079173">
+                                  Header 4
+                                </a>
+                                <ol>
+                                  <li>
+                                    <a href="#H2991838">
+                                      Header 5
+                                    </a>
+                                    <ol>
+                                      <li>
+                                        <a href="#H2402273">
+                                          Headers 6
+                                        </a>
+                                      </li>
+                                    </ol>
+                                  </li>
+                                </ol>
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            <a href="#H2805208">
+                              Code style
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H9315252">
+                              Text formats
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H607067">
+                              Images
+                            </a>
+                            <ol>
+                              <li>
+                                <a href="#H415836">
+                                  Image with caption, as figure
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H9577977">
+                                  Image with caption, not figure
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H166321">
+                                  Image with caption, as photo, no caption
+                                </a>
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            <a href="#H1357540">
+                              Images
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H8876846">
+                              Tables
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H225619">
+                              Math
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H7100180">
+                              References
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H7237703">
+                              Footnotes
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H4364111">
+                              Web URLs; Internal Fidus Writer document links, Anchors
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H758728">
+                              Blockquote
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H3595888">
+                              Copyright information using Fidus Writer document information setting
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H5763006">
+                              Language settings
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#_5_1">
+                      Bibliography
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#_6_0">
+                  Text Section (Chapter 2)
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H1003956">
+                      What you will find in this section:
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H1581297">
+                      Start of text
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H2736763">
+                          Lists
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H1860783">
+                              Ordered list:
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H3077438">
+                              Indented Ordered list:
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H8642363">
+                              Ordered list:
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H6844251">
+                              Ordered list two - with start number set as 5 using the Fidus Writer setting:
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H8647294">
+                              Indented ordered list
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                      <li>
+                        <a href="#H1635418">
+                          Text
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H6880234">
+                          Headers and normal text styles
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H4490657">
+                      Header 1
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H8419696">
+                          Header 2
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H8916798">
+                              Header 3
+                            </a>
+                            <ol>
+                              <li>
+                                <a href="#H7079173">
+                                  Header 4
+                                </a>
+                                <ol>
+                                  <li>
+                                    <a href="#H2991838">
+                                      Header 5
+                                    </a>
+                                    <ol>
+                                      <li>
+                                        <a href="#H2402273">
+                                          Headers 6
+                                        </a>
+                                      </li>
+                                    </ol>
+                                  </li>
+                                </ol>
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            <a href="#H2805208">
+                              Code style
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H9315252">
+                              Text formats
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H607067">
+                              Images
+                            </a>
+                            <ol>
+                              <li>
+                                <a href="#H415836">
+                                  Image with caption, as figure
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H9577977">
+                                  Image with caption, not figure
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H166321">
+                                  Image with caption, as photo, no caption
+                                </a>
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            <a href="#H1357540">
+                              Images
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H8876846">
+                              Tables
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H225619">
+                              Math
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H7100180">
+                              References
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H7237703">
+                              Footnotes
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H4364111">
+                              Web URLs; Internal Fidus Writer document links, Anchors
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H758728">
+                              Blockquote
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H3595888">
+                              Copyright information using Fidus Writer document information setting
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H5763006">
+                              Language settings
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#_6_1">
+                      Bibliography
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#_7_0">
+                  Text Section (Chapter 3)
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H1003956">
+                      What you will find in this section:
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H1581297">
+                      Start of text
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H2736763">
+                          Lists
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H1860783">
+                              Ordered list:
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H3077438">
+                              Indented Ordered list:
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H8642363">
+                              Ordered list:
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H6844251">
+                              Ordered list two - with start number set as 5 using the Fidus Writer setting:
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H8647294">
+                              Indented ordered list
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                      <li>
+                        <a href="#H1635418">
+                          Text
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#H6880234">
+                          Headers and normal text styles
+                        </a>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#H4490657">
+                      Header 1
+                    </a>
+                    <ol>
+                      <li>
+                        <a href="#H8419696">
+                          Header 2
+                        </a>
+                        <ol>
+                          <li>
+                            <a href="#H8916798">
+                              Header 3
+                            </a>
+                            <ol>
+                              <li>
+                                <a href="#H7079173">
+                                  Header 4
+                                </a>
+                                <ol>
+                                  <li>
+                                    <a href="#H2991838">
+                                      Header 5
+                                    </a>
+                                    <ol>
+                                      <li>
+                                        <a href="#H2402273">
+                                          Headers 6
+                                        </a>
+                                      </li>
+                                    </ol>
+                                  </li>
+                                </ol>
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            <a href="#H2805208">
+                              Code style
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H9315252">
+                              Text formats
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H607067">
+                              Images
+                            </a>
+                            <ol>
+                              <li>
+                                <a href="#H415836">
+                                  Image with caption, as figure
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H9577977">
+                                  Image with caption, not figure
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#H166321">
+                                  Image with caption, as photo, no caption
+                                </a>
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            <a href="#H1357540">
+                              Images
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H8876846">
+                              Tables
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H225619">
+                              Math
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H7100180">
+                              References
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H7237703">
+                              Footnotes
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H4364111">
+                              Web URLs; Internal Fidus Writer document links, Anchors
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H758728">
+                              Blockquote
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H3595888">
+                              Copyright information using Fidus Writer document information setting
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#H5763006">
+                              Language settings
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a href="#_7_1">
+                      Bibliography
+                    </a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_8_0">
+              section-backmatter
+            </a>
+            <ol>
+              <li>
+                <a href="#_8_0">
+                  Back Matter
+                </a>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <h1 class="part">section-frontmatter</h1>
+    <div class="article-part article-title" id="_1_0">Copyright Page</div>
+    <div class="article-part article-richtext article-body">
+      <p>Copyright notce text.</p>
+      <p>Publisher and location.</p>
+      <p>ISBN</p>
+      <p>Funder acknowledgement.</p>
+      <p>Classifiation</p>
+      <p>Catalog information.</p>
+      <p></p>
+      <p></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_2_0">Acknowledgements</div>
+    <div class="article-part article-richtext article-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit ante sed tempor ultricies. Sed ut lorem viverra, convallis eros ut, vestibulum neque. Nullam ultrices, dui nec placerat lacinia, ligula purus vestibulum nisl, in venenatis mauris est non lectus. Donec non fringilla dolor, eget ultricies est. In odio turpis, ullamcorper non vehicula a, placerat et nulla. Curabitur molestie, nunc sit amet pretium maximus, mi lorem facilisis nisi, a vestibulum nibh quam et libero. Aliquam elit mi, efficitur vel elit et, dapibus maximus libero. Curabitur nec aliquet sem. Vivamus hendrerit volutpat dui eu pulvinar. Integer suscipit sit amet eros eget maximus. Phasellus accumsan consequat tristique. Fusce diam tortor, varius non dictum id, varius quis ex.</p>
+      <p>Aliquam augue ante, mollis a efficitur a, placerat eget nisi. Vivamus a eros nec mi vehicula rhoncus in eget arcu. Cras varius ornare nisl, et malesuada libero suscipit in. Donec eleifend orci finibus luctus mollis. Maecenas aliquam faucibus leo. Praesent nec quam vel libero accumsan pellentesque aliquam et enim. Nunc vitae diam sed dolor pulvinar blandit. Suspendisse consectetur eleifend tincidunt. In egestas quam a mattis ultrices. Fusce tristique maximus pellentesque. Sed fermentum auctor vestibulum. Sed eget diam quis ipsum convallis porttitor.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_3_0">Contributors</div>
+    <div class="article-part article-richtext article-body">
+      <p>A list of contributors and biographies.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porttitor risus. Proin et posuere ex. Donec elit tellus, interdum ut dapibus vel, feugiat ut ligula. Mauris sed erat in augue consequat ultricies. Phasellus tincidunt, sem eu auctor aliquet, ligula ante scelerisque augue, lacinia aliquet sem libero id nisi. Quisque auctor enim vel justo interdum interdum. Nunc purus augue, tincidunt a feugiat nec, dictum eget lorem. Maecenas malesuada vulputate pellentesque. Aliquam suscipit fringilla sagittis. Phasellus nisl turpis, semper vitae dui pulvinar, laoreet tristique metus.</p>
+      <p>In quam mi, consectetur ut mi at, iaculis tincidunt dolor. Suspendisse pharetra, nulla id vulputate sollicitudin, ex nunc tempor nunc, sed porttitor justo lorem tempor purus. Etiam lacus enim, ornare sit amet facilisis in, tempor id urna. Nulla volutpat lorem a ante bibendum lacinia. Nulla lectus tellus, posuere a arcu et, pellentesque finibus arcu. Proin fermentum interdum consequat. Fusce vehicula sollicitudin velit id euismod. Phasellus blandit sed turpis non sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla lacus ligula, tristique at ornare eget, varius pharetra nisi. Sed eget dapibus velit. Integer sit amet nibh urna.</p>
+      <p>Fusce in tincidunt enim. Aliquam sit amet ante orci. Donec lacinia tellus tempus urna faucibus egestas. Nulla vehicula ligula non semper vehicula. Maecenas efficitur, nisi et tincidunt imperdiet, mauris massa mattis ipsum, vitae elementum erat nisi placerat felis. Aenean vitae est semper, laoreet erat in, consectetur magna. Vivamus nibh diam, vestibulum sit amet arcu in, facilisis vulputate orci. Nunc posuere erat lacus. Sed finibus tristique nibh sed efficitur. Donec id dapibus lectus. Duis rutrum elit diam, quis ullamcorper orci sollicitudin vel. Pellentesque id dictum nisl. Ut ac leo quis orci imperdiet vehicula tempus at nunc.</p>
+      <p>Quisque congue sem nisi, sed commodo ante scelerisque placerat. Phasellus accumsan velit nibh, quis maximus felis mollis id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut pulvinar eros vel dictum dictum. Sed fermentum efficitur ligula. Ut convallis dolor quis dolor varius, eu placerat velit maximus. Fusce in tincidunt ipsum. Ut tincidunt placerat magna nec ultrices. Cras tincidunt magna vel nibh vulputate facilisis. Etiam vel sollicitudin justo. In sodales tortor eu scelerisque porta.</p>
+      <p>Phasellus eget aliquet libero. Duis commodo elementum blandit. Pellentesque erat eros, rhoncus vitae maximus quis, faucibus quis velit. Sed imperdiet lorem id dictum tincidunt. Duis lorem eros, vulputate vitae lacus eu, sollicitudin efficitur elit. Sed laoreet aliquam enim vel vehicula. Ut at nisi porttitor odio placerat luctus. Pellentesque magna quam, suscipit non arcu id, varius lobortis enim. Nullam porta nulla sit amet nisi ultrices, nec ornare erat porta. Sed non arcu ante. Phasellus dui purus, ullamcorper sed dapibus sit amet, auctor sit amet tortor. Maecenas ultricies condimentum sem, eu luctus ipsum fermentum id. Fusce suscipit, tellus a vulputate iaculis, tellus quam ornare nibh, vitae pharetra magna magna ac est. In sollicitudin pretium augue. Nunc auctor auctor dolor nec consectetur. In semper, leo aliquet interdum congue, dolor ante bibendum sapien, et blandit nisl ligula vel leo.</p>
+      <p>Mauris vel gravida lectus. Morbi suscipit mi eget quam elementum accumsan. Sed facilisis laoreet lorem sed eleifend. Integer in metus vel mi blandit dictum in quis nisi. In quam eros, dapibus auctor massa elementum, interdum blandit ante. Sed ac mattis urna. Mauris a libero fermentum, tempor nibh ut, semper arcu. Mauris auctor erat vel lorem vehicula bibendum. Nam dignissim elit sem, sed faucibus libero fermentum ut. Duis mauris massa, maximus vitae porttitor a, finibus id metus. Nulla vehicula turpis et lectus feugiat laoreet. Maecenas et quam eget metus rutrum aliquet. In scelerisque quam et neque feugiat, a fringilla dui blandit.</p>
+      <p>Nam vehicula enim congue volutpat ullamcorper. Fusce ultrices, neque quis egestas malesuada, metus est dapibus est, ac egestas arcu ante sed urna. Curabitur interdum rhoncus commodo. Curabitur accumsan orci ex, et placerat sapien lacinia vitae. Mauris lobortis, mi a vehicula facilisis, sem metus sagittis eros, sit amet fringilla mi neque ac erat. Fusce id ante odio. Cras porttitor lectus eget rhoncus iaculis. Vivamus id efficitur lacus, sed lobortis tellus. Ut at justo at mi facilisis cursus in eget urna. Nullam mi nunc, bibendum ut mi sit amet, interdum posuere lectus. Suspendisse egestas iaculis augue, ac mollis nisi imperdiet nec.</p>
+      <p>Quisque imperdiet massa enim, fringilla ornare nisi semper ac. Aenean interdum dapibus sapien, sit amet interdum eros vehicula id. Curabitur quis nulla pellentesque, sollicitudin neque condimentum, blandit magna. Aliquam eget tincidunt velit. Nullam quis egestas dui, tincidunt suscipit enim. Maecenas tempor sodales enim, viverra sagittis urna imperdiet et. Curabitur ac luctus libero.</p>
+      <p>Aliquam imperdiet risus ac ipsum condimentum, ut gravida augue luctus. Aliquam erat volutpat. Maecenas ultrices dui vitae nunc porta, et molestie purus tristique. Proin a nunc nulla. Donec id sodales elit, id blandit quam. Mauris at porttitor lorem. In non diam aliquet, congue ipsum eget, mattis dui. Aliquam congue sem ac lacus luctus, a eleifend erat ultricies. In rutrum, sem a fermentum fringilla, dui turpis auctor diam, nec viverra tortor nulla iaculis libero. Nullam pulvinar, orci eget condimentum vulputate, lorem ipsum pharetra orci, non ultrices enim justo at sem. Proin suscipit ante nibh, eget gravida felis vulputate et. Sed eget ligula eu justo varius mattis ut id arcu. Aliquam diam nibh, fermentum vel risus eu, faucibus pulvinar felis.</p>
+      <p>In ac vulputate ligula. Fusce semper ex et ligula condimentum ornare. Nulla dolor ligula, vehicula ut iaculis sit amet, convallis quis justo. Vestibulum at mollis mauris. Fusce finibus, est id consequat ultrices, augue nibh dictum sem, a gravida dolor augue a ante. Donec condimentum ipsum sed tristique placerat. Etiam dignissim orci a urna pulvinar, ut fermentum nibh laoreet. Aliquam euismod dolor id ligula vestibulum gravida. Praesent libero lorem, facilisis sit amet imperdiet eu, dapibus non ipsum. Nunc dignissim lectus at nunc laoreet, euismod dignissim nunc consequat. Mauris eleifend lacus in imperdiet dignissim. Nam condimentum magna nec arcu maximus hendrerit. Cras eget urna lorem. Sed a quam non nulla blandit pretium vehicula vestibulum sem. Cras suscipit eleifend justo. Ut dapibus ante in velit lacinia, eget viverra odio dictum.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_4_0">Foreword</div>
+    <div class="article-part article-richtext article-body">
+      <p>A text by the editors not directly referencing the text.</p>
+      <p>The assumption is a foreword would not have footnotes or citations.</p>
+      <p>By Author One Name and Author Two Name.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh tortor, egestas ornare metus nec, sodales convallis nibh. Maecenas sit amet suscipit nulla, ut accumsan dui. Aliquam purus lorem, mollis a est sed, elementum fermentum nisl. Sed nunc massa, venenatis sagittis placerat vel, posuere fringilla dolor. Nullam placerat ex eget rhoncus lacinia. Etiam dignissim ipsum augue, rutrum sagittis turpis bibendum ut. Suspendisse neque ligula, malesuada eget urna id, semper tincidunt erat. Vivamus lacinia lacinia mi. Mauris dapibus odio efficitur metus viverra finibus. Vestibulum sit amet sem in lectus sagittis placerat.</p>
+      <p>Vivamus placerat, velit a aliquet blandit, nisl tellus aliquet justo, eget aliquet leo justo a orci. Sed fermentum, dui eget sollicitudin mattis, metus quam dictum ante, ut vestibulum sem augue vitae nibh. Cras nec malesuada nisl, nec interdum leo. Sed quis metus pellentesque, aliquam ex sed, laoreet nunc. In iaculis eu ligula a sagittis. Morbi in urna in eros imperdiet blandit. Suspendisse in nisl laoreet, porttitor nibh vitae, scelerisque felis. Sed ultricies bibendum sodales. Quisque dignissim augue risus, id suscipit leo dapibus id.</p>
+      <p>In ornare ex est, ac condimentum velit fermentum ac. Pellentesque lacinia metus ex, vel feugiat est pretium ac. Aenean ac iaculis magna. Proin gravida ligula felis. Aenean sed rutrum ante. Etiam orci tortor, tempor id enim non, bibendum consequat odio. Nunc et ante at leo interdum blandit. Phasellus condimentum quam nibh, at suscipit enim faucibus in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce in tortor libero. Vivamus at laoreet mauris, id feugiat urna. Nullam nec odio nec massa ornare interdum eget nec nisi. Vivamus posuere sapien diam, nec commodo nunc aliquet vel. Nam vel congue urna. Pellentesque id quam eleifend, egestas massa sed, finibus turpis. Pellentesque convallis purus quis mollis luctus.</p>
+      <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut interdum diam quam, malesuada varius est consectetur in. Proin sodales fringilla velit, non scelerisque nisl posuere non. Fusce eget metus euismod, ullamcorper mauris malesuada, hendrerit felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque tempus pretium posuere. Nullam vitae ullamcorper massa, eu posuere lorem. Maecenas imperdiet augue sed venenatis pharetra. Nunc iaculis, tortor et varius malesuada, lorem nulla fermentum felis, at fermentum mi dolor id nisl. Nulla porta tortor ut arcu tempus, vitae lobortis mauris vehicula. Aenean turpis quam, lobortis nec ligula dignissim, tincidunt venenatis libero. Cras at volutpat neque, ut laoreet tortor. Donec pulvinar scelerisque eros, nec vehicula ligula fermentum ac. In suscipit metus ut lobortis placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      <p>Etiam enim augue, facilisis eu tristique sit amet, dictum tempor tortor. Aliquam faucibus purus et enim aliquet congue. Morbi venenatis neque ut felis tincidunt tempus. Ut erat velit, posuere eu congue sed, rhoncus ut nisi. Proin nisl leo, eleifend a nulla lacinia, auctor venenatis eros. Suspendisse congue ipsum bibendum massa cursus, a porttitor velit tempor. Ut luctus rutrum est eu tincidunt. Nunc vitae convallis dui, vel fringilla mi. Donec auctor magna ac ullamcorper auctor. Integer id sapien velit. Nulla facilisi. In hac habitasse platea dictumst. Aenean molestie a risus porta iaculis.</p>
+      <p>Suspendisse efficitur tincidunt massa sit amet pellentesque. Morbi eu euismod leo, nec porttitor est. Sed hendrerit eros ac augue scelerisque accumsan. Etiam nec mauris in ante consectetur consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed interdum tellus. In hac habitasse platea dictumst. Nam dictum metus odio, eu tincidunt dolor molestie et. Phasellus ultricies rutrum enim eget faucibus.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <h1 class="part">section-booktext</h1>
+    <div class="article-part article-title" id="_5_0">Text Section (Chapter 1)</div>
+    <div class="article-part article-heading article-subtitle">
+      <h1 id="H8148042">Subtitle (inserted text): One of three test sections.</h1>
+    </div>
+    <div class="article-part article-contributors article-authors"><span class="contributor" data-firstname="First Name 1" data-lastname="Last Name 1" data-email="false" data-institution="false">First Name 1 Last Name 1</span><span class="contributor" data-firstname="First Name 2" data-lastname="Lst Name 2" data-email="false" data-institution="false">First Name 2 Lst Name 2</span></div>
+    <div class="article-part article-richtext article-abstract">
+      <p>Abstract: A document using Fidus Writer document features placed to represent common document use for example indenting lists.</p>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <p>Document set as US English. Doc style Comfy Elephant. Citation style CMOS Author Date.</p>
+      <h2 id="H1003956">What you will find in this section:</h2>
+      <ul id="L36378971">
+        <li>
+          <p>Use of optional Fidus Writer sections: Subtitle, Author (2), Abstract, Keywords</p>
+        </li>
+        <li>
+          <p>Unordered list</p>
+        </li>
+        <li>
+          <p>Indented unordered list</p>
+        </li>
+        <li>
+          <p>Ordered list</p>
+        </li>
+        <li>
+          <p>Ordered list with number start set</p>
+        </li>
+        <li>
+          <p>Indented ordered list</p>
+        </li>
+        <li>
+          <p>Text</p>
+        </li>
+        <li>
+          <p>H1, H2, H3, H4, H5, H6</p>
+        </li>
+        <li>
+          <p>Code formatting</p>
+        </li>
+        <li>
+          <p>Images with captions, with no captions. Listed and not listed as figure. Image at 100%, 50%, 25%. Using an image category.</p>
+        </li>
+        <li>
+          <p>Tables, images as tables</p>
+        </li>
+        <li>
+          <p>Math, image as math</p>
+        </li>
+        <li>
+          <p>References</p>
+        </li>
+        <li>
+          <p>Footnotes</p>
+        </li>
+        <li>
+          <p>Web URLs; Internal Fidus Writer document links, Anchors</p>
+        </li>
+        <li>
+          <p>Text formatting: bold, italic, underline</p>
+        </li>
+        <li>
+          <p>Blockquote</p>
+        </li>
+        <li>
+          <p>Copyright information using Fidus Writer document information setting</p>
+        </li>
+        <li>
+          <p>Language setting</p>
+        </li>
+      </ul>
+      <h2 id="H1581297">Start of text</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut enim diam. Aliquam erat volutpat. Ut commodo nibh ut maximus sodales. Mauris a enim non neque bibendum tincidunt at et eros. Nunc sed rutrum nibh. Nam vulputate pharetra velit euismod ullamcorper. Duis nec ligula nec magna facilisis luctus. Aliquam id accumsan leo. Etiam at velit vulputate, consequat leo id, imperdiet ante. Integer eget ornare turpis, eu convallis velit.</p>
+      <h3 id="H2736763">Lists</h3>
+      <h4 id="H1860783">Ordered list:</h4>
+      <ul id="L64358621">
+        <li>
+          <p>Nulla ac felis et dolor porttitor auctor nec eget orci.</p>
+        </li>
+        <li>
+          <p>Integer aliquet purus maximus sem sagittis, vitae condimentum est tempus.</p>
+        </li>
+        <li>
+          <p>Pellentesque sed ligula eget lacus scelerisque aliquet.</p>
+        </li>
+        <li>
+          <p>Phasellus non nulla vitae sapien lobortis dictum.</p>
+        </li>
+        <li>
+          <p>Etiam imperdiet risus in efficitur dictum.</p>
+        </li>
+      </ul>
+      <h4 id="H3077438">Indented Ordered list:</h4>
+      <ul id="L68542031">
+        <li>
+          <p>Nulla ac felis et dolor porttitor auctor nec eget orci.</p>
+          <ul id="L51301111">
+            <li>
+              <p>1 indent: Integer aliquet purus maximus sem sagittis, vitae condimentum est tempus.</p>
+              <ul id="L74707441">
+                <li>
+                  <p>2 indent</p>
+                  <ul id="L56682651">
+                    <li>
+                      <p>3 indent</p>
+                      <ul id="L85215031">
+                        <li>
+                          <p>4 Indent</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>Etiam imperdiet risus in efficitur dictum.</p>
+        </li>
+      </ul>
+      <h4 id="H8642363">Ordered list:</h4>
+      <ol id="L4230041">
+        <li>
+          <p>Maecenas pulvinar vel metus in bibendum. </p>
+        </li>
+        <li>
+          <p>Mauris congue odio sit amet velit ultrices posuere. </p>
+        </li>
+        <li>
+          <p>Vivamus pellentesque porttitor ligula in volutpat. </p>
+        </li>
+        <li>
+          <p>Proin et porta mauris, sed sodales ligula. </p>
+        </li>
+        <li>
+          <p>Fusce gravida facilisis dui, ut tristique lacus volutpat nec. </p>
+        </li>
+        <li>
+          <p>Integer vitae sagittis mauris, non porttitor urna. </p>
+        </li>
+      </ol>
+      <h4 id="H6844251">Ordered list two - with start number set as 5 using the Fidus Writer setting:</h4>
+      <ol id="L14184401" start="5">
+        <li>
+          <p>Maecenas pulvinar vel metus in bibendum. </p>
+        </li>
+        <li>
+          <p>Mauris congue odio sit amet velit ultrices posuere. </p>
+        </li>
+        <li>
+          <p>Vivamus pellentesque porttitor ligula in volutpat. </p>
+        </li>
+        <li>
+          <p>Proin et porta mauris, sed sodales ligula. </p>
+        </li>
+        <li>
+          <p>Fusce gravida facilisis dui, ut tristique lacus volutpat nec. </p>
+        </li>
+        <li>
+          <p>Integer vitae sagittis mauris, non porttitor urna.</p>
+        </li>
+      </ol>
+      <h4 id="H8647294">Indented ordered list</h4>
+      <ol id="L16949241">
+        <li>
+          <p>Maecenas pulvinar vel metus in bibendum. </p>
+          <ol id="L50817441">
+            <li>
+              <p>Mauris congue odio sit amet velit ultrices posuere. </p>
+              <ol id="L58426361">
+                <li>
+                  <p>Vivamus pellentesque porttitor ligula in volutpat. </p>
+                  <ol id="L77468431">
+                    <li>
+                      <p>Proin et porta mauris, sed sodales ligula. </p>
+                      <ol id="L85625981">
+                        <li>
+                          <p>Fusce gravida facilisis dui, ut tristique lacus volutpat nec.</p>
+                          <ol id="L93860021">
+                            <li>
+                              <p> Integer vitae sagittis mauris, non porttitor urna. </p>
+                              <ol id="L12739131">
+                                <li>
+                                  <p>Sed tincidunt, dui ut ullamcorper tempor, dolor velit feugiat ex, et imperdiet mauris leo quis velit. </p>
+                                </li>
+                              </ol>
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <h3 id="H1635418">Text</h3>
+      <p>Integer lacinia dui in eleifend aliquam. Mauris eleifend eget justo vitae viverra. Nulla tempus maximus metus, ac fermentum velit placerat vel. Integer accumsan leo in nunc tincidunt placerat. Nunc sed nunc a risus semper condimentum. Aenean non egestas leo. Nulla id turpis varius, venenatis nibh et, ultrices nisi. Aliquam ultrices dapibus sapien a finibus. Vivamus in sollicitudin nibh. Proin eros quam, volutpat a facilisis sit amet, mattis eget lorem. Etiam scelerisque in felis eu sollicitudin. Integer vel vehicula risus. Morbi vestibulum est erat, faucibus molestie sapien sodales in.</p>
+      <p>Praesent ornare massa in turpis sodales, id fringilla massa malesuada. Nam gravida urna sit amet neque sollicitudin aliquet. Praesent tristique magna vel pretium laoreet. Nam dictum at velit non euismod. Nam et elementum metus. Sed ac lacus vitae justo volutpat vulputate eget nec urna. Nulla facilisi. Quisque faucibus mollis venenatis.</p>
+      <p>Mauris est felis, vestibulum eget ligula sit amet, scelerisque ornare tortor. Quisque auctor magna a sem iaculis, vitae volutpat nibh ornare. Nulla rutrum varius nibh vitae pharetra. Curabitur leo tellus, pharetra eget eros quis, posuere iaculis lorem. Nam iaculis augue neque, id tempus dui congue sed. Nullam eget ultrices purus. In et arcu id est egestas tincidunt. Proin vel fringilla nisi, non tempor purus.</p>
+      <p>Aenean tincidunt arcu nisi, et cursus ligula facilisis eu. Sed ut leo lacus. Proin eget risus risus. Curabitur varius ligula eu mauris pulvinar molestie. Mauris fringilla risus magna. Vivamus lacus sem, placerat ut viverra non, rhoncus eget dolor. Fusce ut arcu rutrum dolor ornare hendrerit. Vestibulum ut porttitor tellus, a venenatis elit. Nullam sit amet rhoncus nibh, ac eleifend ante. Sed quis venenatis diam, eget euismod metus. Integer sed viverra erat. Pellentesque ac purus tellus. Nam id pretium tortor, vel tempor libero. Sed quis elementum risus. Curabitur est ante, posuere non purus ut, pharetra dictum lacus. Aliquam hendrerit sagittis neque, eu elementum odio lacinia non.</p>
+      <p>Maecenas rutrum maximus arcu, at scelerisque nisi luctus suscipit. Nunc lobortis a arcu et fermentum. Etiam nulla nunc, elementum vitae luctus non, faucibus ut sem. Cras quis pellentesque nulla. Maecenas mauris turpis, volutpat vel tellus eu, condimentum ultrices ante. Suspendisse sit amet sem a nibh accumsan placerat. Sed gravida viverra vehicula. Aliquam cursus accumsan quam, ac tristique sapien pharetra in. Suspendisse eu leo varius massa vehicula pulvinar. Integer laoreet blandit purus, dapibus viverra nulla fringilla sed. Proin ut magna consequat, ultrices felis vel, commodo eros. Proin nisl quam, gravida ut risus ac, posuere fermentum augue. Cras pretium pulvinar nibh vel gravida. In erat eros, fringilla nec ipsum sodales, tempus egestas dolor. Pellentesque risus metus, vehicula id magna non, sodales molestie augue.</p>
+      <h3 id="H6880234">Headers and normal text styles</h3>
+      <h1 id="H4490657">Header 1</h1>
+      <h2 id="H8419696">Header 2</h2>
+      <h3 id="H8916798">Header 3</h3>
+      <h4 id="H7079173">Header 4</h4>
+      <h5 id="H2991838">Header 5</h5>
+      <h6 id="H2402273">Headers 6</h6>
+      <p>Normal</p>
+      <h3 id="H2805208">Code style</h3>
+      <p>Code format is greyed out?</p>
+      <h3 id="H9315252">Text formats</h3>
+      <p><strong>Bold</strong></p>
+      <p><em>Italic</em></p>
+      <p><em><strong>Bold italic</strong></em></p>
+      <p>Underline is greyed out?</p>
+      <h3 id="H607067">Images</h3>
+      <p>Images with captions, with no captions. Image at 100%, 50%, 25%</p>
+      <h4 id="H415836">Image with caption, as figure</h4>
+      <p>Included copyright information, 100% size</p>
+      <figure id="F46521" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/2112cd94-9504-4ac8-a467-c996ced73408.jpg">
+        <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Figure</span><span class="text">Reference needed FR, CC 2.0</span></figcaption>
+      </figure>
+      <p></p>
+      <h4 id="H9577977">Image with caption, not figure</h4>
+      <p>With caption, no listing, 50%, left. Copyright information.</p>
+      <figure id="F35988861" class="aligned-left image-width-50" data-aligned="left" data-width="50" data-category="none"><img src="images/d2133ec1-3584-435f-ae11-585197fe8785.jpg">
+        <figcaption><span class="label"></span><span class="text">Citation needed EN</span></figcaption>
+      </figure>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <h4 id="H166321">Image with caption, as photo, no caption</h4>
+      <p>Right align, 25%, with copyright</p>
+      <figure id="F40137711" class="aligned-right image-width-25" data-aligned="right" data-width="25" data-category="photo"><img src="images/4610ab2c-b384-45c6-bea8-45345ff23871.png">
+        <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Photo</span><span class="text">Citation needed CN</span></figcaption>
+      </figure>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <h3 id="H1357540">Images</h3>
+      <p>Some images to allow for counting in figures and photos. Three per type in this one document.</p>
+      <p>Figure A</p>
+      <figure id="F50654351" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure"><img src="images/00f266b7-70bc-4fc2-b492-8007f2f7dc22.png">
+        <figcaption><span class="label-counter" data-book-counter="2" data-chapter-counter="2">Figure</span><span class="text">Assamese</span></figcaption>
+      </figure>
+      <p>Figure B</p>
+      <figure id="F77741651" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure"><img src="images/e70cc696-28fd-4fe8-90b7-5f7c3e6566d2.png">
+        <figcaption><span class="label-counter" data-book-counter="3" data-chapter-counter="3">Figure</span><span class="text">Marathi</span></figcaption>
+      </figure>
+      <p>Figure C</p>
+      <figure id="F27601541" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure"><img src="images/5ef3b987-0b9b-4379-bf0c-706280992017.png">
+        <figcaption><span class="label-counter" data-book-counter="4" data-chapter-counter="4">Figure</span><span class="text">Polish</span></figcaption>
+      </figure>
+      <p>Photo A</p>
+      <figure id="F46756271" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="photo"><img src="images/ee55764a-2062-4b77-902d-dfadac68e94f.jpg">
+        <figcaption><span class="label-counter" data-book-counter="2" data-chapter-counter="2">Photo</span><span class="text">Jimmy Wales</span></figcaption>
+      </figure>
+      <p>Photo B</p>
+      <figure id="F2133221" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="photo"><img src="images/87e04269-ad23-4246-a913-35cb2083205e.jpg">
+        <figcaption><span class="label-counter" data-book-counter="3" data-chapter-counter="3">Photo</span><span class="text">March for Science</span></figcaption>
+      </figure>
+      <p>Photo C</p>
+      <figure id="F91410751" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="photo"><img src="images/36448392-2aec-4123-9310-a7e9d375d438.jpg">
+        <figcaption><span class="label-counter" data-book-counter="4" data-chapter-counter="4">Photo</span></figcaption>
+      </figure>
+      <p></p>
+      <h3 id="H8876846">Tables</h3>
+      <table id="T66652301" class="table-100 table-center table-fixed" data-width="100" data-aligned="center" data-layout="fixed" data-category="table">
+        <caption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Table</span><span class="text">Table with caption and listed, header on</span></caption>
+        <tbody>
+          <tr>
+            <th>
+              <p>Column 1</p>
+            </th>
+            <th>
+              <p>Column 2</p>
+            </th>
+            <th>
+              <p>Column 3</p>
+            </th>
+            <th>
+              <p>Column 4</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 1</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 2</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 3</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 4</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 5</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 6</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <figure id="F8966261" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="table">
+        <figcaption><span class="label-counter" data-book-counter="2" data-chapter-counter="2">Table</span><span class="text">A complex table</span></figcaption><img src="images/9e9b653f-c96b-4f61-94e3-84c0be199871.jpg">
+      </figure>
+      <h3 id="H225619">Math</h3>
+      <p>Equation:</p>
+      <p><span data-equation="9\notin3\mathfrak{\Re }55\mathfrak{\Im }\ne\partial" class="equation" contenteditable="false"><span class="ML__mathlive" style="margin-left:0.06em;"><span class="ML__strut" style="height:1.2em;"></span><span class="ML__strut--bottom" style="height:1.4em;vertical-align:-0.2em;"></span><span class="ML__base"><span class="ML__cmr">9</span><span class="ML__cmr" style="margin-left:0.28em;">∉</span><span class="ML__cmr" style="margin-left:0.28em;">3</span><span style="margin-left:0.17em;">ℜ</span><span class="ML__cmr" style="margin-left:0.17em;">55</span><span style="margin-left:0.17em;">ℑ</span><span class="ML__cmr">≠</span><span class="ML__cmr" style="margin-right:0.06em;margin-left:0.28em;">∂</span></span></span></span></p>
+      <p>Equation as image:</p>
+      <figure id="F9394491" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="equation"><img src="images/c15490e4-8fc0-4e3f-b49c-bbe51655b8d2.jpg">
+        <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Equation</span><span class="text"> Abacus Lübeck, Schleswig-Holstein</span></figcaption>
+      </figure>
+      <h3 id="H7100180">References</h3>
+      <p>Nam eleifend augue sit amet faucibus accumsan. Sed felis mi, rutrum sed diam id, ultrices sodales dui. Sed consectetur sagittis lectus vitae interdum. Nulla finibus, quam id suscipit ultrices, dui purus commodo mi, at faucibus dolor sapien eu urna. Quisque cursus, velit vel sollicitudin pellentesque, magna justo euismod tellus, molestie mollis enim ligula id magna.<span class="citation">(Ressel 2019)</span> Maecenas varius orci ligula, et posuere massa aliquet vel. Integer pellentesque interdum convallis. Pellentesque lobortis nulla eu ligula sagittis, sed eleifend neque ultricies. Etiam venenatis arcu diam, non pharetra arcu iaculis sit amet.<span class="citation">(Williams and Rediker 2020)</span> Sed eros odio, pellentesque sed tellus quis, aliquet ullamcorper turpis. Quisque eu aliquam sapien. Curabitur dapibus, metus sit amet varius venenatis, nisi odio lacinia tortor, non elementum felis mauris vehicula diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec ligula condimentum hendrerit. Curabitur posuere tortor id odio ullamcorper, sed viverra nisi fringilla.<span class="citation">(Rossignol 2017)</span></p>
+      <p>Nulla eget rhoncus urna. Fusce ultricies quam vel tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum venenatis lacus sit amet vestibulum aliquam. Suspendisse lobortis nisl sed libero gravida rhoncus. Suspendisse vestibulum eros ac mi tempor, vitae faucibus odio bibendum. Nam viverra mauris auctor blandit euismod. Vestibulum dapibus justo elementum lobortis fermentum.</p>
+      <h3 id="H7237703">Footnotes</h3>
+      <p>Nam eleifend augue sit amet faucibus accumsan. Sed felis mi, rutrum sed diam id, ultrices sodales dui. Sed consectetur sagittis lectus vitae interdum. Nulla finibus, quam id suscipit ultrices, dui purus commodo mi, at faucibus dolor sapien eu urna. Quisque cursus, velit vel sollicitudin pellentesque, magna justo euismod tellus, molestie mollis enim ligula id magna.<a href="#fn1" class="fn"><span class="footnote-counter" data-chapter-counter="1" data-book-counter="1"></span></a> Maecenas varius orci ligula, et posuere massa aliquet vel. Integer pellentesque interdum convallis. Pellentesque lobortis nulla eu ligula sagittis, sed eleifend neque ultricies. Etiam venenatis arcu diam, non pharetra arcu iaculis sit amet. Sed eros odio, pellentesque sed tellus quis, aliquet ullamcorper turpis.<a href="#fn2" class="fn"><span class="footnote-counter" data-chapter-counter="2" data-book-counter="2"></span></a> Quisque eu aliquam sapien. Curabitur dapibus, metus sit amet varius venenatis, nisi odio lacinia tortor, non elementum felis mauris vehicula diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec ligula condimentum hendrerit. Curabitur posuere tortor id odio ullamcorper, sed viverra nisi fringilla.<a href="#fn3" class="fn"><span class="footnote-counter" data-chapter-counter="3" data-book-counter="3"></span></a></p>
+      <p>Nulla eget rhoncus urna. Fusce ultricies quam vel tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum venenatis lacus sit amet vestibulum aliquam. Suspendisse lobortis nisl sed libero gravida rhoncus. Suspendisse vestibulum eros ac mi tempor, vitae faucibus odio bibendum. Nam viverra mauris auctor blandit euismod. Vestibulum dapibus justo elementum lobortis fermentum.</p>
+      <h3 id="H4364111">Web URLs; Internal Fidus Writer document links, Anchors</h3>
+      <p>URL The historian <a href="https://www.marcusrediker.com/" title="Marcus Rediker">Marcus Rediker</a>.</p>
+      <p>Internal link in the document to a <a href="#H1581297" title="Start of text">header anchor</a> and to an <a href="#A746704" title="Anchor">anchor</a>.</p>
+      <p><span class="anchor" data-id="A746704">Anchor</span></p>
+      <h3 id="H758728">Blockquote</h3>
+      <blockquote>
+        <p>Here below is the full list of ten books that have shaped my life – one basketball book, one joke book, one autobiography, three novels, and four history books. One never knows which books will change your life and therein lies one of the greatest joys of reading.&nbsp;<a href="https://t.co/biMVo4ylZL">https://t.co/biMVo4ylZL</a></p>
+      </blockquote>
+      <h3 id="H3595888">Copyright information using Fidus Writer document information setting</h3>
+      <p>Document set to CC0, 2021, The Author.</p>
+      <h3 id="H5763006">Language settings</h3>
+      <p>Document set to US English.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes">
+      <section id="fn1" role="doc-footnote" data-chapter-counter="1" data-book-counter="1">
+        <p><span class="footnote-counter" data-chapter-counter="1" data-book-counter="1"></span>A single paragraph note.</p>
+      </section>
+      <section id="fn2" role="doc-footnote" data-chapter-counter="2" data-book-counter="2">
+        <p><span class="footnote-counter" data-chapter-counter="2" data-book-counter="2"></span>A double paragraph note.</p>
+        <p>Paragraph two.</p>
+      </section>
+      <section id="fn3" role="doc-footnote" data-chapter-counter="3" data-book-counter="3">
+        <p><span class="footnote-counter" data-chapter-counter="3" data-book-counter="3"></span>A note with a citation in it?<span class="citation">(Rossignol 2017)</span> </p>
+      </section>
+    </section>
+    <h1 class="article-bibliography-header" id="_5_1">Bibliography</h1>
+    <div class="csl-bib-body">
+      <div class="csl-entry">Ressel, Magnus. 2019. “Rezension: Marcus Rediker: Gesetzlose Des Atlantiks. Piraten Und Rebellische Seeleute in Der Frühen Neuzeit (Rezensiert von Magnus Ressel).” https://doi.org/10.15463/REC.799967328.</div>
+      <div class="csl-entry">Rossignol, Marie-Jeanne. 2017. “Rezension: Marcus Rediker: Les Révoltés de l’Amistad. Une Odyssée Atlantique (1839-1842) (Rezensiert von Marie-Jeanne Rossignol).” https://doi.org/10.15463/REC.612893388.</div>
+      <div class="csl-entry">Williams and Rediker. 2020. “History Below Deck: An Interview with Marcus Rediker.” <i>Symplokē</i> 28 (1–2): 547. https://doi.org/10.5250/symploke.28.1-2.0547.</div>
+    </div>
+    <div class="article-part article-title" id="_6_0">Text Section (Chapter 2)</div>
+    <div class="article-part article-richtext article-body">
+      <p>Document set as US English. Doc style Comfy Elephant. Citation style CMOS Author Date.</p>
+      <h2 id="H1003956">What you will find in this section:</h2>
+      <ul id="L36378971">
+        <li>
+          <p>Use of optional Fidus Writer sections: Subtitle, Author (2), Abstract, Keywords</p>
+        </li>
+        <li>
+          <p>Unordered list</p>
+        </li>
+        <li>
+          <p>Indented unordered list</p>
+        </li>
+        <li>
+          <p>Ordered list</p>
+        </li>
+        <li>
+          <p>Ordered list with number start set</p>
+        </li>
+        <li>
+          <p>Indented ordered list</p>
+        </li>
+        <li>
+          <p>Text</p>
+        </li>
+        <li>
+          <p>H1, H2, H3, H4, H5, H6</p>
+        </li>
+        <li>
+          <p>Code formatting</p>
+        </li>
+        <li>
+          <p>Images with captions, with no captions. Listed and not listed as figure. Image at 100%, 50%, 25%. Using an image category.</p>
+        </li>
+        <li>
+          <p>Tables, images as tables</p>
+        </li>
+        <li>
+          <p>Math, image as math</p>
+        </li>
+        <li>
+          <p>References</p>
+        </li>
+        <li>
+          <p>Footnotes</p>
+        </li>
+        <li>
+          <p>Web URLs; Internal Fidus Writer document links, Anchors</p>
+        </li>
+        <li>
+          <p>Text formatting: bold, italic, underline</p>
+        </li>
+        <li>
+          <p>Blockquote</p>
+        </li>
+        <li>
+          <p>Copyright information using Fidus Writer document information setting</p>
+        </li>
+        <li>
+          <p>Language setting</p>
+        </li>
+      </ul>
+      <h2 id="H1581297">Start of text</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut enim diam. Aliquam erat volutpat. Ut commodo nibh ut maximus sodales. Mauris a enim non neque bibendum tincidunt at et eros. Nunc sed rutrum nibh. Nam vulputate pharetra velit euismod ullamcorper. Duis nec ligula nec magna facilisis luctus. Aliquam id accumsan leo. Etiam at velit vulputate, consequat leo id, imperdiet ante. Integer eget ornare turpis, eu convallis velit.</p>
+      <h3 id="H2736763">Lists</h3>
+      <h4 id="H1860783">Ordered list:</h4>
+      <ul id="L64358621">
+        <li>
+          <p>Nulla ac felis et dolor porttitor auctor nec eget orci.</p>
+        </li>
+        <li>
+          <p>Integer aliquet purus maximus sem sagittis, vitae condimentum est tempus.</p>
+        </li>
+        <li>
+          <p>Pellentesque sed ligula eget lacus scelerisque aliquet.</p>
+        </li>
+        <li>
+          <p>Phasellus non nulla vitae sapien lobortis dictum.</p>
+        </li>
+        <li>
+          <p>Etiam imperdiet risus in efficitur dictum.</p>
+        </li>
+      </ul>
+      <h4 id="H3077438">Indented Ordered list:</h4>
+      <ul id="L68542031">
+        <li>
+          <p>Nulla ac felis et dolor porttitor auctor nec eget orci.</p>
+          <ul id="L51301111">
+            <li>
+              <p>1 indent: Integer aliquet purus maximus sem sagittis, vitae condimentum est tempus.</p>
+              <ul id="L74707441">
+                <li>
+                  <p>2 indent</p>
+                  <ul id="L56682651">
+                    <li>
+                      <p>3 indent</p>
+                      <ul id="L85215031">
+                        <li>
+                          <p>4 Indent</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>Etiam imperdiet risus in efficitur dictum.</p>
+        </li>
+      </ul>
+      <h4 id="H8642363">Ordered list:</h4>
+      <ol id="L4230041">
+        <li>
+          <p>Maecenas pulvinar vel metus in bibendum. </p>
+        </li>
+        <li>
+          <p>Mauris congue odio sit amet velit ultrices posuere. </p>
+        </li>
+        <li>
+          <p>Vivamus pellentesque porttitor ligula in volutpat. </p>
+        </li>
+        <li>
+          <p>Proin et porta mauris, sed sodales ligula. </p>
+        </li>
+        <li>
+          <p>Fusce gravida facilisis dui, ut tristique lacus volutpat nec. </p>
+        </li>
+        <li>
+          <p>Integer vitae sagittis mauris, non porttitor urna. </p>
+        </li>
+      </ol>
+      <h4 id="H6844251">Ordered list two - with start number set as 5 using the Fidus Writer setting:</h4>
+      <ol id="L14184401" start="5">
+        <li>
+          <p>Maecenas pulvinar vel metus in bibendum. </p>
+        </li>
+        <li>
+          <p>Mauris congue odio sit amet velit ultrices posuere. </p>
+        </li>
+        <li>
+          <p>Vivamus pellentesque porttitor ligula in volutpat. </p>
+        </li>
+        <li>
+          <p>Proin et porta mauris, sed sodales ligula. </p>
+        </li>
+        <li>
+          <p>Fusce gravida facilisis dui, ut tristique lacus volutpat nec. </p>
+        </li>
+        <li>
+          <p>Integer vitae sagittis mauris, non porttitor urna.</p>
+        </li>
+      </ol>
+      <h4 id="H8647294">Indented ordered list</h4>
+      <ol id="L16949241">
+        <li>
+          <p>Maecenas pulvinar vel metus in bibendum. </p>
+          <ol id="L50817441">
+            <li>
+              <p>Mauris congue odio sit amet velit ultrices posuere. </p>
+              <ol id="L58426361">
+                <li>
+                  <p>Vivamus pellentesque porttitor ligula in volutpat. </p>
+                  <ol id="L77468431">
+                    <li>
+                      <p>Proin et porta mauris, sed sodales ligula. </p>
+                      <ol id="L85625981">
+                        <li>
+                          <p>Fusce gravida facilisis dui, ut tristique lacus volutpat nec.</p>
+                          <ol id="L93860021">
+                            <li>
+                              <p> Integer vitae sagittis mauris, non porttitor urna. </p>
+                              <ol id="L12739131">
+                                <li>
+                                  <p>Sed tincidunt, dui ut ullamcorper tempor, dolor velit feugiat ex, et imperdiet mauris leo quis velit. </p>
+                                </li>
+                              </ol>
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <h3 id="H1635418">Text</h3>
+      <p>Integer lacinia dui in eleifend aliquam. Mauris eleifend eget justo vitae viverra. Nulla tempus maximus metus, ac fermentum velit placerat vel. Integer accumsan leo in nunc tincidunt placerat. Nunc sed nunc a risus semper condimentum. Aenean non egestas leo. Nulla id turpis varius, venenatis nibh et, ultrices nisi. Aliquam ultrices dapibus sapien a finibus. Vivamus in sollicitudin nibh. Proin eros quam, volutpat a facilisis sit amet, mattis eget lorem. Etiam scelerisque in felis eu sollicitudin. Integer vel vehicula risus. Morbi vestibulum est erat, faucibus molestie sapien sodales in.</p>
+      <p>Praesent ornare massa in turpis sodales, id fringilla massa malesuada. Nam gravida urna sit amet neque sollicitudin aliquet. Praesent tristique magna vel pretium laoreet. Nam dictum at velit non euismod. Nam et elementum metus. Sed ac lacus vitae justo volutpat vulputate eget nec urna. Nulla facilisi. Quisque faucibus mollis venenatis.</p>
+      <p>Mauris est felis, vestibulum eget ligula sit amet, scelerisque ornare tortor. Quisque auctor magna a sem iaculis, vitae volutpat nibh ornare. Nulla rutrum varius nibh vitae pharetra. Curabitur leo tellus, pharetra eget eros quis, posuere iaculis lorem. Nam iaculis augue neque, id tempus dui congue sed. Nullam eget ultrices purus. In et arcu id est egestas tincidunt. Proin vel fringilla nisi, non tempor purus.</p>
+      <p>Aenean tincidunt arcu nisi, et cursus ligula facilisis eu. Sed ut leo lacus. Proin eget risus risus. Curabitur varius ligula eu mauris pulvinar molestie. Mauris fringilla risus magna. Vivamus lacus sem, placerat ut viverra non, rhoncus eget dolor. Fusce ut arcu rutrum dolor ornare hendrerit. Vestibulum ut porttitor tellus, a venenatis elit. Nullam sit amet rhoncus nibh, ac eleifend ante. Sed quis venenatis diam, eget euismod metus. Integer sed viverra erat. Pellentesque ac purus tellus. Nam id pretium tortor, vel tempor libero. Sed quis elementum risus. Curabitur est ante, posuere non purus ut, pharetra dictum lacus. Aliquam hendrerit sagittis neque, eu elementum odio lacinia non.</p>
+      <p>Maecenas rutrum maximus arcu, at scelerisque nisi luctus suscipit. Nunc lobortis a arcu et fermentum. Etiam nulla nunc, elementum vitae luctus non, faucibus ut sem. Cras quis pellentesque nulla. Maecenas mauris turpis, volutpat vel tellus eu, condimentum ultrices ante. Suspendisse sit amet sem a nibh accumsan placerat. Sed gravida viverra vehicula. Aliquam cursus accumsan quam, ac tristique sapien pharetra in. Suspendisse eu leo varius massa vehicula pulvinar. Integer laoreet blandit purus, dapibus viverra nulla fringilla sed. Proin ut magna consequat, ultrices felis vel, commodo eros. Proin nisl quam, gravida ut risus ac, posuere fermentum augue. Cras pretium pulvinar nibh vel gravida. In erat eros, fringilla nec ipsum sodales, tempus egestas dolor. Pellentesque risus metus, vehicula id magna non, sodales molestie augue.</p>
+      <h3 id="H6880234">Headers and normal text styles</h3>
+      <h1 id="H4490657">Header 1</h1>
+      <h2 id="H8419696">Header 2</h2>
+      <h3 id="H8916798">Header 3</h3>
+      <h4 id="H7079173">Header 4</h4>
+      <h5 id="H2991838">Header 5</h5>
+      <h6 id="H2402273">Headers 6</h6>
+      <p>Normal</p>
+      <h3 id="H2805208">Code style</h3>
+      <p>Code format is greyed out?</p>
+      <h3 id="H9315252">Text formats</h3>
+      <p><strong>Bold</strong></p>
+      <p><em>Italic</em></p>
+      <p><em><strong>Bold italic</strong></em></p>
+      <p>Underline is greyed out?</p>
+      <h3 id="H607067">Images</h3>
+      <p>Images with captions, with no captions. Image at 100%, 50%, 25%</p>
+      <h4 id="H415836">Image with caption, as figure</h4>
+      <p>Included copyright information, 100% size</p>
+      <figure id="F27135281" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/2112cd94-9504-4ac8-a467-c996ced73408.jpg">
+        <figcaption><span class="label-counter" data-book-counter="5" data-chapter-counter="1">Figure</span><span class="text">Citation needed FR</span></figcaption>
+      </figure>
+      <h4 id="H9577977">Image with caption, not figure</h4>
+      <p>With caption, no listing, 50%, left. Copyright information.</p>
+      <figure id="F35988861" class="aligned-left image-width-50" data-aligned="left" data-width="50" data-category="none" data-caption-hidden="true"><img src="images/d2133ec1-3584-435f-ae11-585197fe8785.jpg"></figure>
+      <h4 id="H166321">Image with caption, as photo, no caption</h4>
+      <p>Right align, 25%, with copyright</p>
+      <figure id="F40137711" class="aligned-right image-width-25" data-aligned="right" data-width="25" data-category="photo" data-caption-hidden="true"><img src="images/4610ab2c-b384-45c6-bea8-45345ff23871.png">
+        <figcaption><span class="label-counter" data-book-counter="5" data-chapter-counter="1">Photo</span></figcaption>
+      </figure>
+      <h3 id="H1357540">Images</h3>
+      <p>Some images to allow for counting in figures and photos. Three per type in this one document.</p>
+      <p>Figure A</p>
+      <figure id="F50654351" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure" data-caption-hidden="true"><img src="images/00f266b7-70bc-4fc2-b492-8007f2f7dc22.png">
+        <figcaption><span class="label-counter" data-book-counter="6" data-chapter-counter="2">Figure</span></figcaption>
+      </figure>
+      <p>Figure B</p>
+      <figure id="F77741651" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure" data-caption-hidden="true"><img src="images/e70cc696-28fd-4fe8-90b7-5f7c3e6566d2.png">
+        <figcaption><span class="label-counter" data-book-counter="7" data-chapter-counter="3">Figure</span></figcaption>
+      </figure>
+      <p>Figure C</p>
+      <figure id="F27601541" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure" data-caption-hidden="true"><img src="images/5ef3b987-0b9b-4379-bf0c-706280992017.png">
+        <figcaption><span class="label-counter" data-book-counter="8" data-chapter-counter="4">Figure</span></figcaption>
+      </figure>
+      <p>Photo A</p>
+      <figure id="F46756271" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="photo" data-caption-hidden="true"><img src="images/ee55764a-2062-4b77-902d-dfadac68e94f.jpg">
+        <figcaption><span class="label-counter" data-book-counter="6" data-chapter-counter="2">Photo</span></figcaption>
+      </figure>
+      <p>Photo B</p>
+      <figure id="F2133221" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="photo" data-caption-hidden="true"><img src="images/87e04269-ad23-4246-a913-35cb2083205e.jpg">
+        <figcaption><span class="label-counter" data-book-counter="7" data-chapter-counter="3">Photo</span></figcaption>
+      </figure>
+      <p>Photo C</p>
+      <figure id="F91410751" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="photo" data-caption-hidden="true"><img src="images/36448392-2aec-4123-9310-a7e9d375d438.jpg">
+        <figcaption><span class="label-counter" data-book-counter="8" data-chapter-counter="4">Photo</span></figcaption>
+      </figure>
+      <h3 id="H8876846">Tables</h3>
+      <table id="T66652301" class="table-100 table-center table-fixed" data-width="100" data-aligned="center" data-layout="fixed" data-category="table">
+        <caption><span class="label-counter" data-book-counter="3" data-chapter-counter="1">Table</span></caption>
+        <tbody>
+          <tr>
+            <th>
+              <p>Column 1</p>
+            </th>
+            <th>
+              <p>Column 2</p>
+            </th>
+            <th>
+              <p>Column 3</p>
+            </th>
+            <th>
+              <p>Column 4</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 1</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 2</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 3</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 4</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 5</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 6</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <figure id="F8966261" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="table" data-caption-hidden="true">
+        <figcaption><span class="label-counter" data-book-counter="4" data-chapter-counter="2">Table</span></figcaption><img src="images/9e9b653f-c96b-4f61-94e3-84c0be199871.jpg">
+      </figure>
+      <h3 id="H225619">Math</h3>
+      <p>Equation:</p>
+      <p><span data-equation="9\notin3\mathfrak{\Re }55\mathfrak{\Im }\ne\partial" class="equation" contenteditable="false"><span class="ML__mathlive" style="margin-left:0.06em;"><span class="ML__strut" style="height:1.2em;"></span><span class="ML__strut--bottom" style="height:1.4em;vertical-align:-0.2em;"></span><span class="ML__base"><span class="ML__cmr">9</span><span class="ML__cmr" style="margin-left:0.28em;">∉</span><span class="ML__cmr" style="margin-left:0.28em;">3</span><span style="margin-left:0.17em;">ℜ</span><span class="ML__cmr" style="margin-left:0.17em;">55</span><span style="margin-left:0.17em;">ℑ</span><span class="ML__cmr">≠</span><span class="ML__cmr" style="margin-right:0.06em;margin-left:0.28em;">∂</span></span></span></span></p>
+      <p>Equation as image:</p>
+      <figure id="F9394491" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="equation" data-caption-hidden="true"><img src="images/c15490e4-8fc0-4e3f-b49c-bbe51655b8d2.jpg">
+        <figcaption><span class="label-counter" data-book-counter="2" data-chapter-counter="1">Equation</span></figcaption>
+      </figure>
+      <h3 id="H7100180">References</h3>
+      <p>Nam eleifend augue sit amet faucibus accumsan. Sed felis mi, rutrum sed diam id, ultrices sodales dui. Sed consectetur sagittis lectus vitae interdum. Nulla finibus, quam id suscipit ultrices, dui purus commodo mi, at faucibus dolor sapien eu urna. Quisque cursus, velit vel sollicitudin pellentesque, magna justo euismod tellus, molestie mollis enim ligula id magna.<span class="citation">(Ressel 2019)</span> Maecenas varius orci ligula, et posuere massa aliquet vel. Integer pellentesque interdum convallis. Pellentesque lobortis nulla eu ligula sagittis, sed eleifend neque ultricies. Etiam venenatis arcu diam, non pharetra arcu iaculis sit amet.<span class="citation">(Williams and Rediker 2020)</span> Sed eros odio, pellentesque sed tellus quis, aliquet ullamcorper turpis. Quisque eu aliquam sapien. Curabitur dapibus, metus sit amet varius venenatis, nisi odio lacinia tortor, non elementum felis mauris vehicula diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec ligula condimentum hendrerit. Curabitur posuere tortor id odio ullamcorper, sed viverra nisi fringilla.<span class="citation">(Rossignol 2017)</span></p>
+      <p>Nulla eget rhoncus urna. Fusce ultricies quam vel tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum venenatis lacus sit amet vestibulum aliquam. Suspendisse lobortis nisl sed libero gravida rhoncus. Suspendisse vestibulum eros ac mi tempor, vitae faucibus odio bibendum. Nam viverra mauris auctor blandit euismod. Vestibulum dapibus justo elementum lobortis fermentum.</p>
+      <h3 id="H7237703">Footnotes</h3>
+      <p>Nam eleifend augue sit amet faucibus accumsan. Sed felis mi, rutrum sed diam id, ultrices sodales dui. Sed consectetur sagittis lectus vitae interdum. Nulla finibus, quam id suscipit ultrices, dui purus commodo mi, at faucibus dolor sapien eu urna. Quisque cursus, velit vel sollicitudin pellentesque, magna justo euismod tellus, molestie mollis enim ligula id magna.<a href="#fn4" class="fn"><span class="footnote-counter" data-chapter-counter="1" data-book-counter="4"></span></a> Maecenas varius orci ligula, et posuere massa aliquet vel. Integer pellentesque interdum convallis. Pellentesque lobortis nulla eu ligula sagittis, sed eleifend neque ultricies. Etiam venenatis arcu diam, non pharetra arcu iaculis sit amet. Sed eros odio, pellentesque sed tellus quis, aliquet ullamcorper turpis.<a href="#fn5" class="fn"><span class="footnote-counter" data-chapter-counter="2" data-book-counter="5"></span></a> Quisque eu aliquam sapien. Curabitur dapibus, metus sit amet varius venenatis, nisi odio lacinia tortor, non elementum felis mauris vehicula diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec ligula condimentum hendrerit. Curabitur posuere tortor id odio ullamcorper, sed viverra nisi fringilla.<a href="#fn6" class="fn"><span class="footnote-counter" data-chapter-counter="3" data-book-counter="6"></span></a></p>
+      <p>Nulla eget rhoncus urna. Fusce ultricies quam vel tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum venenatis lacus sit amet vestibulum aliquam. Suspendisse lobortis nisl sed libero gravida rhoncus. Suspendisse vestibulum eros ac mi tempor, vitae faucibus odio bibendum. Nam viverra mauris auctor blandit euismod. Vestibulum dapibus justo elementum lobortis fermentum.</p>
+      <h3 id="H4364111">Web URLs; Internal Fidus Writer document links, Anchors</h3>
+      <p>URL The historian <a href="https://www.marcusrediker.com/" title="Marcus Rediker">Marcus Rediker</a>.</p>
+      <p>Internal link in the document to a <a href="#H1581297" title="Start of text">header anchor</a> and to an <a href="#A746704" title="Anchor">anchor</a>.</p>
+      <p><span class="anchor" data-id="A746704">Anchor</span></p>
+      <h3 id="H758728">Blockquote</h3>
+      <blockquote>
+        <p>Here below is the full list of ten books that have shaped my life – one basketball book, one joke book, one autobiography, three novels, and four history books. One never knows which books will change your life and therein lies one of the greatest joys of reading.&nbsp;<a href="https://t.co/biMVo4ylZL">https://t.co/biMVo4ylZL</a></p>
+      </blockquote>
+      <h3 id="H3595888">Copyright information using Fidus Writer document information setting</h3>
+      <p>Document set to CC0, 2021, The Author.</p>
+      <h3 id="H5763006">Language settings</h3>
+      <p>Document set to US English.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes">
+      <section id="fn4" role="doc-footnote" data-chapter-counter="1" data-book-counter="4">
+        <p><span class="footnote-counter" data-chapter-counter="1" data-book-counter="4"></span>A single paragraph note.</p>
+      </section>
+      <section id="fn5" role="doc-footnote" data-chapter-counter="2" data-book-counter="5">
+        <p><span class="footnote-counter" data-chapter-counter="2" data-book-counter="5"></span>A double paragraph note.</p>
+        <p>Paragraph two.</p>
+      </section>
+      <section id="fn6" role="doc-footnote" data-chapter-counter="3" data-book-counter="6">
+        <p><span class="footnote-counter" data-chapter-counter="3" data-book-counter="6"></span>A note with a citation in it?<span class="citation">(Rossignol 2017)</span> </p>
+      </section>
+    </section>
+    <h1 class="article-bibliography-header" id="_6_1">Bibliography</h1>
+    <div class="csl-bib-body">
+      <div class="csl-entry">Ressel, Magnus. 2019. “Rezension: Marcus Rediker: Gesetzlose Des Atlantiks. Piraten Und Rebellische Seeleute in Der Frühen Neuzeit (Rezensiert von Magnus Ressel).” https://doi.org/10.15463/REC.799967328.</div>
+      <div class="csl-entry">Rossignol, Marie-Jeanne. 2017. “Rezension: Marcus Rediker: Les Révoltés de l’Amistad. Une Odyssée Atlantique (1839-1842) (Rezensiert von Marie-Jeanne Rossignol).” https://doi.org/10.15463/REC.612893388.</div>
+      <div class="csl-entry">Williams and Rediker. 2020. “History Below Deck: An Interview with Marcus Rediker.” <i>Symplokē</i> 28 (1–2): 547. https://doi.org/10.5250/symploke.28.1-2.0547.</div>
+    </div>
+    <div class="article-part article-title" id="_7_0">Text Section (Chapter 3)</div>
+    <div class="article-part article-richtext article-body">
+      <p>Document set as US English. Doc style Comfy Elephant. Citation style CMOS Author Date.</p>
+      <h2 id="H1003956">What you will find in this section:</h2>
+      <ul id="L36378971">
+        <li>
+          <p>Use of optional Fidus Writer sections: Subtitle, Author (2), Abstract, Keywords</p>
+        </li>
+        <li>
+          <p>Unordered list</p>
+        </li>
+        <li>
+          <p>Indented unordered list</p>
+        </li>
+        <li>
+          <p>Ordered list</p>
+        </li>
+        <li>
+          <p>Ordered list with number start set</p>
+        </li>
+        <li>
+          <p>Indented ordered list</p>
+        </li>
+        <li>
+          <p>Text</p>
+        </li>
+        <li>
+          <p>H1, H2, H3, H4, H5, H6</p>
+        </li>
+        <li>
+          <p>Code formatting</p>
+        </li>
+        <li>
+          <p>Images with captions, with no captions. Listed and not listed as figure. Image at 100%, 50%, 25%. Using an image category.</p>
+        </li>
+        <li>
+          <p>Tables, images as tables</p>
+        </li>
+        <li>
+          <p>Math, image as math</p>
+        </li>
+        <li>
+          <p>References</p>
+        </li>
+        <li>
+          <p>Footnotes</p>
+        </li>
+        <li>
+          <p>Web URLs; Internal Fidus Writer document links, Anchors</p>
+        </li>
+        <li>
+          <p>Text formatting: bold, italic, underline</p>
+        </li>
+        <li>
+          <p>Blockquote</p>
+        </li>
+        <li>
+          <p>Copyright information using Fidus Writer document information setting</p>
+        </li>
+        <li>
+          <p>Language setting</p>
+        </li>
+      </ul>
+      <h2 id="H1581297">Start of text</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut enim diam. Aliquam erat volutpat. Ut commodo nibh ut maximus sodales. Mauris a enim non neque bibendum tincidunt at et eros. Nunc sed rutrum nibh. Nam vulputate pharetra velit euismod ullamcorper. Duis nec ligula nec magna facilisis luctus. Aliquam id accumsan leo. Etiam at velit vulputate, consequat leo id, imperdiet ante. Integer eget ornare turpis, eu convallis velit.</p>
+      <h3 id="H2736763">Lists</h3>
+      <h4 id="H1860783">Ordered list:</h4>
+      <ul id="L64358621">
+        <li>
+          <p>Nulla ac felis et dolor porttitor auctor nec eget orci.</p>
+        </li>
+        <li>
+          <p>Integer aliquet purus maximus sem sagittis, vitae condimentum est tempus.</p>
+        </li>
+        <li>
+          <p>Pellentesque sed ligula eget lacus scelerisque aliquet.</p>
+        </li>
+        <li>
+          <p>Phasellus non nulla vitae sapien lobortis dictum.</p>
+        </li>
+        <li>
+          <p>Etiam imperdiet risus in efficitur dictum.</p>
+        </li>
+      </ul>
+      <h4 id="H3077438">Indented Ordered list:</h4>
+      <ul id="L68542031">
+        <li>
+          <p>Nulla ac felis et dolor porttitor auctor nec eget orci.</p>
+          <ul id="L51301111">
+            <li>
+              <p>1 indent: Integer aliquet purus maximus sem sagittis, vitae condimentum est tempus.</p>
+              <ul id="L74707441">
+                <li>
+                  <p>2 indent</p>
+                  <ul id="L56682651">
+                    <li>
+                      <p>3 indent</p>
+                      <ul id="L85215031">
+                        <li>
+                          <p>4 Indent</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>Etiam imperdiet risus in efficitur dictum.</p>
+        </li>
+      </ul>
+      <h4 id="H8642363">Ordered list:</h4>
+      <ol id="L4230041">
+        <li>
+          <p>Maecenas pulvinar vel metus in bibendum. </p>
+        </li>
+        <li>
+          <p>Mauris congue odio sit amet velit ultrices posuere. </p>
+        </li>
+        <li>
+          <p>Vivamus pellentesque porttitor ligula in volutpat. </p>
+        </li>
+        <li>
+          <p>Proin et porta mauris, sed sodales ligula. </p>
+        </li>
+        <li>
+          <p>Fusce gravida facilisis dui, ut tristique lacus volutpat nec. </p>
+        </li>
+        <li>
+          <p>Integer vitae sagittis mauris, non porttitor urna. </p>
+        </li>
+      </ol>
+      <h4 id="H6844251">Ordered list two - with start number set as 5 using the Fidus Writer setting:</h4>
+      <ol id="L14184401" start="5">
+        <li>
+          <p>Maecenas pulvinar vel metus in bibendum. </p>
+        </li>
+        <li>
+          <p>Mauris congue odio sit amet velit ultrices posuere. </p>
+        </li>
+        <li>
+          <p>Vivamus pellentesque porttitor ligula in volutpat. </p>
+        </li>
+        <li>
+          <p>Proin et porta mauris, sed sodales ligula. </p>
+        </li>
+        <li>
+          <p>Fusce gravida facilisis dui, ut tristique lacus volutpat nec. </p>
+        </li>
+        <li>
+          <p>Integer vitae sagittis mauris, non porttitor urna.</p>
+        </li>
+      </ol>
+      <h4 id="H8647294">Indented ordered list</h4>
+      <ol id="L16949241">
+        <li>
+          <p>Maecenas pulvinar vel metus in bibendum. </p>
+          <ol id="L50817441">
+            <li>
+              <p>Mauris congue odio sit amet velit ultrices posuere. </p>
+              <ol id="L58426361">
+                <li>
+                  <p>Vivamus pellentesque porttitor ligula in volutpat. </p>
+                  <ol id="L77468431">
+                    <li>
+                      <p>Proin et porta mauris, sed sodales ligula. </p>
+                      <ol id="L85625981">
+                        <li>
+                          <p>Fusce gravida facilisis dui, ut tristique lacus volutpat nec.</p>
+                          <ol id="L93860021">
+                            <li>
+                              <p> Integer vitae sagittis mauris, non porttitor urna. </p>
+                              <ol id="L12739131">
+                                <li>
+                                  <p>Sed tincidunt, dui ut ullamcorper tempor, dolor velit feugiat ex, et imperdiet mauris leo quis velit. </p>
+                                </li>
+                              </ol>
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <h3 id="H1635418">Text</h3>
+      <p>Integer lacinia dui in eleifend aliquam. Mauris eleifend eget justo vitae viverra. Nulla tempus maximus metus, ac fermentum velit placerat vel. Integer accumsan leo in nunc tincidunt placerat. Nunc sed nunc a risus semper condimentum. Aenean non egestas leo. Nulla id turpis varius, venenatis nibh et, ultrices nisi. Aliquam ultrices dapibus sapien a finibus. Vivamus in sollicitudin nibh. Proin eros quam, volutpat a facilisis sit amet, mattis eget lorem. Etiam scelerisque in felis eu sollicitudin. Integer vel vehicula risus. Morbi vestibulum est erat, faucibus molestie sapien sodales in.</p>
+      <p>Praesent ornare massa in turpis sodales, id fringilla massa malesuada. Nam gravida urna sit amet neque sollicitudin aliquet. Praesent tristique magna vel pretium laoreet. Nam dictum at velit non euismod. Nam et elementum metus. Sed ac lacus vitae justo volutpat vulputate eget nec urna. Nulla facilisi. Quisque faucibus mollis venenatis.</p>
+      <p>Mauris est felis, vestibulum eget ligula sit amet, scelerisque ornare tortor. Quisque auctor magna a sem iaculis, vitae volutpat nibh ornare. Nulla rutrum varius nibh vitae pharetra. Curabitur leo tellus, pharetra eget eros quis, posuere iaculis lorem. Nam iaculis augue neque, id tempus dui congue sed. Nullam eget ultrices purus. In et arcu id est egestas tincidunt. Proin vel fringilla nisi, non tempor purus.</p>
+      <p>Aenean tincidunt arcu nisi, et cursus ligula facilisis eu. Sed ut leo lacus. Proin eget risus risus. Curabitur varius ligula eu mauris pulvinar molestie. Mauris fringilla risus magna. Vivamus lacus sem, placerat ut viverra non, rhoncus eget dolor. Fusce ut arcu rutrum dolor ornare hendrerit. Vestibulum ut porttitor tellus, a venenatis elit. Nullam sit amet rhoncus nibh, ac eleifend ante. Sed quis venenatis diam, eget euismod metus. Integer sed viverra erat. Pellentesque ac purus tellus. Nam id pretium tortor, vel tempor libero. Sed quis elementum risus. Curabitur est ante, posuere non purus ut, pharetra dictum lacus. Aliquam hendrerit sagittis neque, eu elementum odio lacinia non.</p>
+      <p>Maecenas rutrum maximus arcu, at scelerisque nisi luctus suscipit. Nunc lobortis a arcu et fermentum. Etiam nulla nunc, elementum vitae luctus non, faucibus ut sem. Cras quis pellentesque nulla. Maecenas mauris turpis, volutpat vel tellus eu, condimentum ultrices ante. Suspendisse sit amet sem a nibh accumsan placerat. Sed gravida viverra vehicula. Aliquam cursus accumsan quam, ac tristique sapien pharetra in. Suspendisse eu leo varius massa vehicula pulvinar. Integer laoreet blandit purus, dapibus viverra nulla fringilla sed. Proin ut magna consequat, ultrices felis vel, commodo eros. Proin nisl quam, gravida ut risus ac, posuere fermentum augue. Cras pretium pulvinar nibh vel gravida. In erat eros, fringilla nec ipsum sodales, tempus egestas dolor. Pellentesque risus metus, vehicula id magna non, sodales molestie augue.</p>
+      <h3 id="H6880234">Headers and normal text styles</h3>
+      <h1 id="H4490657">Header 1</h1>
+      <h2 id="H8419696">Header 2</h2>
+      <h3 id="H8916798">Header 3</h3>
+      <h4 id="H7079173">Header 4</h4>
+      <h5 id="H2991838">Header 5</h5>
+      <h6 id="H2402273">Headers 6</h6>
+      <p>Normal</p>
+      <h3 id="H2805208">Code style</h3>
+      <p>Code format is greyed out?</p>
+      <h3 id="H9315252">Text formats</h3>
+      <p><strong>Bold</strong></p>
+      <p><em>Italic</em></p>
+      <p><em><strong>Bold italic</strong></em></p>
+      <p>Underline is greyed out?</p>
+      <h3 id="H607067">Images</h3>
+      <p>Images with captions, with no captions. Image at 100%, 50%, 25%</p>
+      <h4 id="H415836">Image with caption, as figure</h4>
+      <p>Included copyright information, 100% size</p>
+      <figure id="F27135281" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure" data-caption-hidden="true"><img src="images/2112cd94-9504-4ac8-a467-c996ced73408.jpg">
+        <figcaption><span class="label-counter" data-book-counter="9" data-chapter-counter="1">Figure</span></figcaption>
+      </figure>
+      <h4 id="H9577977">Image with caption, not figure</h4>
+      <p>With caption, no listing, 50%, left. Copyright information.</p>
+      <figure id="F35988861" class="aligned-left image-width-50" data-aligned="left" data-width="50" data-category="none"><img src="images/d2133ec1-3584-435f-ae11-585197fe8785.jpg">
+        <figcaption><span class="label"></span><span class="text">Citation needed EN</span></figcaption>
+      </figure>
+      <h4 id="H166321">Image with caption, as photo, no caption</h4>
+      <p>Right align, 25%, with copyright</p>
+      <figure id="F40137711" class="aligned-right image-width-25" data-aligned="right" data-width="25" data-category="photo"><img src="images/4610ab2c-b384-45c6-bea8-45345ff23871.png">
+        <figcaption><span class="label-counter" data-book-counter="9" data-chapter-counter="1">Photo</span><span class="text"> 1:  1: Citation needed CN</span></figcaption>
+      </figure>
+      <h3 id="H1357540">Images</h3>
+      <p>Some images to allow for counting in figures and photos. Three per type in this one document.</p>
+      <p>Figure A</p>
+      <figure id="F50654351" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure"><img src="images/00f266b7-70bc-4fc2-b492-8007f2f7dc22.png">
+        <figcaption><span class="label-counter" data-book-counter="10" data-chapter-counter="2">Figure</span><span class="text"> 2:  2: Assamese</span></figcaption>
+      </figure>
+      <p>Figure B</p>
+      <figure id="F77741651" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure"><img src="images/e70cc696-28fd-4fe8-90b7-5f7c3e6566d2.png">
+        <figcaption><span class="label-counter" data-book-counter="11" data-chapter-counter="3">Figure</span><span class="text"> 3:  3: Marathi</span></figcaption>
+      </figure>
+      <p>Figure C</p>
+      <figure id="F27601541" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure"><img src="images/5ef3b987-0b9b-4379-bf0c-706280992017.png">
+        <figcaption><span class="label-counter" data-book-counter="12" data-chapter-counter="4">Figure</span><span class="text"> 4:  4: Polish</span></figcaption>
+      </figure>
+      <p>Photo A</p>
+      <figure id="F46756271" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="photo"><img src="images/ee55764a-2062-4b77-902d-dfadac68e94f.jpg">
+        <figcaption><span class="label-counter" data-book-counter="10" data-chapter-counter="2">Photo</span><span class="text"> 2:  2: Jimmy Wales</span></figcaption>
+      </figure>
+      <p>Photo B</p>
+      <figure id="F2133221" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="photo"><img src="images/87e04269-ad23-4246-a913-35cb2083205e.jpg">
+        <figcaption><span class="label-counter" data-book-counter="11" data-chapter-counter="3">Photo</span><span class="text"> 3:  3: March for Science</span></figcaption>
+      </figure>
+      <p>Photo C</p>
+      <figure id="F91410751" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="photo"><img src="images/36448392-2aec-4123-9310-a7e9d375d438.jpg">
+        <figcaption><span class="label-counter" data-book-counter="12" data-chapter-counter="4">Photo</span><span class="text"> 4:  4: </span></figcaption>
+      </figure>
+      <h3 id="H8876846">Tables</h3>
+      <table id="T66652301" class="table-100 table-center table-fixed" data-width="100" data-aligned="center" data-layout="fixed" data-category="table">
+        <caption><span class="label-counter" data-book-counter="5" data-chapter-counter="1">Table</span><span class="text">Table with caption and listed, header on</span></caption>
+        <tbody>
+          <tr>
+            <th>
+              <p>Column 1</p>
+            </th>
+            <th>
+              <p>Column 2</p>
+            </th>
+            <th>
+              <p>Column 3</p>
+            </th>
+            <th>
+              <p>Column 4</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 1</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 2</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 3</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 4</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 5</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Row 6</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+            <td>
+              <p>data</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <figure id="F8966261" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="table">
+        <figcaption><span class="label-counter" data-book-counter="6" data-chapter-counter="2">Table</span><span class="text"> 1:  1: A complex table</span></figcaption><img src="images/9e9b653f-c96b-4f61-94e3-84c0be199871.jpg">
+      </figure>
+      <h3 id="H225619">Math</h3>
+      <p>Equation:</p>
+      <p><span data-equation="9\notin3\mathfrak{\Re }55\mathfrak{\Im }\ne\partial" class="equation" contenteditable="false"><span class="ML__mathlive" style="margin-left:0.06em;"><span class="ML__strut" style="height:1.2em;"></span><span class="ML__strut--bottom" style="height:1.4em;vertical-align:-0.2em;"></span><span class="ML__base"><span class="ML__cmr">9</span><span class="ML__cmr" style="margin-left:0.28em;">∉</span><span class="ML__cmr" style="margin-left:0.28em;">3</span><span style="margin-left:0.17em;">ℜ</span><span class="ML__cmr" style="margin-left:0.17em;">55</span><span style="margin-left:0.17em;">ℑ</span><span class="ML__cmr">≠</span><span class="ML__cmr" style="margin-right:0.06em;margin-left:0.28em;">∂</span></span></span></span></p>
+      <p>Equation as image:</p>
+      <figure id="F9394491" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="equation"><img src="images/c15490e4-8fc0-4e3f-b49c-bbe51655b8d2.jpg">
+        <figcaption><span class="label-counter" data-book-counter="3" data-chapter-counter="1">Equation</span><span class="text"> Abacus Lübeck, Schleswig-Holstein</span></figcaption>
+      </figure>
+      <h3 id="H7100180">References</h3>
+      <p>Nam eleifend augue sit amet faucibus accumsan. Sed felis mi, rutrum sed diam id, ultrices sodales dui. Sed consectetur sagittis lectus vitae interdum. Nulla finibus, quam id suscipit ultrices, dui purus commodo mi, at faucibus dolor sapien eu urna. Quisque cursus, velit vel sollicitudin pellentesque, magna justo euismod tellus, molestie mollis enim ligula id magna.<span class="citation">(Ressel 2019)</span> Maecenas varius orci ligula, et posuere massa aliquet vel. Integer pellentesque interdum convallis. Pellentesque lobortis nulla eu ligula sagittis, sed eleifend neque ultricies. Etiam venenatis arcu diam, non pharetra arcu iaculis sit amet.<span class="citation">(Williams and Rediker 2020)</span> Sed eros odio, pellentesque sed tellus quis, aliquet ullamcorper turpis. Quisque eu aliquam sapien. Curabitur dapibus, metus sit amet varius venenatis, nisi odio lacinia tortor, non elementum felis mauris vehicula diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec ligula condimentum hendrerit. Curabitur posuere tortor id odio ullamcorper, sed viverra nisi fringilla.<span class="citation">(Rossignol 2017)</span></p>
+      <p>Nulla eget rhoncus urna. Fusce ultricies quam vel tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum venenatis lacus sit amet vestibulum aliquam. Suspendisse lobortis nisl sed libero gravida rhoncus. Suspendisse vestibulum eros ac mi tempor, vitae faucibus odio bibendum. Nam viverra mauris auctor blandit euismod. Vestibulum dapibus justo elementum lobortis fermentum.</p>
+      <h3 id="H7237703">Footnotes</h3>
+      <p>Nam eleifend augue sit amet faucibus accumsan. Sed felis mi, rutrum sed diam id, ultrices sodales dui. Sed consectetur sagittis lectus vitae interdum. Nulla finibus, quam id suscipit ultrices, dui purus commodo mi, at faucibus dolor sapien eu urna. Quisque cursus, velit vel sollicitudin pellentesque, magna justo euismod tellus, molestie mollis enim ligula id magna.<a href="#fn7" class="fn"><span class="footnote-counter" data-chapter-counter="1" data-book-counter="7"></span></a> Maecenas varius orci ligula, et posuere massa aliquet vel. Integer pellentesque interdum convallis. Pellentesque lobortis nulla eu ligula sagittis, sed eleifend neque ultricies. Etiam venenatis arcu diam, non pharetra arcu iaculis sit amet. Sed eros odio, pellentesque sed tellus quis, aliquet ullamcorper turpis.<a href="#fn8" class="fn"><span class="footnote-counter" data-chapter-counter="2" data-book-counter="8"></span></a> Quisque eu aliquam sapien. Curabitur dapibus, metus sit amet varius venenatis, nisi odio lacinia tortor, non elementum felis mauris vehicula diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec ligula condimentum hendrerit. Curabitur posuere tortor id odio ullamcorper, sed viverra nisi fringilla.<a href="#fn9" class="fn"><span class="footnote-counter" data-chapter-counter="3" data-book-counter="9"></span></a></p>
+      <p>Nulla eget rhoncus urna. Fusce ultricies quam vel tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum venenatis lacus sit amet vestibulum aliquam. Suspendisse lobortis nisl sed libero gravida rhoncus. Suspendisse vestibulum eros ac mi tempor, vitae faucibus odio bibendum. Nam viverra mauris auctor blandit euismod. Vestibulum dapibus justo elementum lobortis fermentum.</p>
+      <h3 id="H4364111">Web URLs; Internal Fidus Writer document links, Anchors</h3>
+      <p>URL The historian <a href="https://www.marcusrediker.com/" title="Marcus Rediker">Marcus Rediker</a>.</p>
+      <p>Internal link in the document to a <a href="#H1581297" title="Start of text">header anchor</a> and to an <a href="#A746704" title="Anchor">anchor</a>.</p>
+      <p><span class="anchor" data-id="A746704">Anchor</span></p>
+      <h3 id="H758728">Blockquote</h3>
+      <blockquote>
+        <p>Here below is the full list of ten books that have shaped my life – one basketball book, one joke book, one autobiography, three novels, and four history books. One never knows which books will change your life and therein lies one of the greatest joys of reading.&nbsp;<a href="https://t.co/biMVo4ylZL">https://t.co/biMVo4ylZL</a></p>
+      </blockquote>
+      <h3 id="H3595888">Copyright information using Fidus Writer document information setting</h3>
+      <p>Document set to CC0, 2021, The Author.</p>
+      <h3 id="H5763006">Language settings</h3>
+      <p>Document set to US English.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes">
+      <section id="fn7" role="doc-footnote" data-chapter-counter="1" data-book-counter="7">
+        <p><span class="footnote-counter" data-chapter-counter="1" data-book-counter="7"></span>A single paragraph note.</p>
+      </section>
+      <section id="fn8" role="doc-footnote" data-chapter-counter="2" data-book-counter="8">
+        <p><span class="footnote-counter" data-chapter-counter="2" data-book-counter="8"></span>A double paragraph note.</p>
+        <p>Paragraph two.</p>
+      </section>
+      <section id="fn9" role="doc-footnote" data-chapter-counter="3" data-book-counter="9">
+        <p><span class="footnote-counter" data-chapter-counter="3" data-book-counter="9"></span>A note with a citation in it?<span class="citation">(Rossignol 2017)</span> </p>
+      </section>
+    </section>
+    <h1 class="article-bibliography-header" id="_7_1">Bibliography</h1>
+    <div class="csl-bib-body">
+      <div class="csl-entry">Ressel, Magnus. 2019. “Rezension: Marcus Rediker: Gesetzlose Des Atlantiks. Piraten Und Rebellische Seeleute in Der Frühen Neuzeit (Rezensiert von Magnus Ressel).” https://doi.org/10.15463/REC.799967328.</div>
+      <div class="csl-entry">Rossignol, Marie-Jeanne. 2017. “Rezension: Marcus Rediker: Les Révoltés de l’Amistad. Une Odyssée Atlantique (1839-1842) (Rezensiert von Marie-Jeanne Rossignol).” https://doi.org/10.15463/REC.612893388.</div>
+      <div class="csl-entry">Williams and Rediker. 2020. “History Below Deck: An Interview with Marcus Rediker.” <i>Symplokē</i> 28 (1–2): 547. https://doi.org/10.5250/symploke.28.1-2.0547.</div>
+    </div>
+    <h1 class="part">section-backmatter</h1>
+    <div class="article-part article-title" id="_8_0">Back Matter</div>
+    <div class="article-part article-richtext article-body">
+      <p>Back matter can contain different sections such as an index, abreviations, etc.</p>
+      <p>Nam eleifend augue sit amet faucibus accumsan. Sed felis mi, rutrum sed diam id, ultrices sodales dui. Sed consectetur sagittis lectus vitae interdum. Nulla finibus, quam id suscipit ultrices, dui purus commodo mi, at faucibus dolor sapien eu urna. Quisque cursus, velit vel sollicitudin pellentesque, magna justo euismod tellus, molestie mollis enim ligula id magna. Maecenas varius orci ligula, et posuere massa aliquet vel. Integer pellentesque interdum convallis. Pellentesque lobortis nulla eu ligula sagittis, sed eleifend neque ultricies. Etiam venenatis arcu diam, non pharetra arcu iaculis sit amet. Sed eros odio, pellentesque sed tellus quis, aliquet ullamcorper turpis. Quisque eu aliquam sapien. Curabitur dapibus, metus sit amet varius venenatis, nisi odio lacinia tortor, non elementum felis mauris vehicula diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec ligula condimentum hendrerit. Curabitur posuere tortor id odio ullamcorper, sed viverra nisi fringilla.</p>
+      <p>Nulla eget rhoncus urna. Fusce ultricies quam vel tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum venenatis lacus sit amet vestibulum aliquam. Suspendisse lobortis nisl sed libero gravida rhoncus. Suspendisse vestibulum eros ac mi tempor, vitae faucibus odio bibendum. Nam viverra mauris auctor blandit euismod. Vestibulum dapibus justo elementum lobortis fermentum.</p>
+      <p>Proin posuere commodo tortor, ut feugiat urna sollicitudin in. Quisque tempor ante ac nunc venenatis, ac rhoncus ante pellentesque. Mauris maximus pharetra dolor mattis tempus. Morbi congue elit ut viverra ultrices. Maecenas eu pellentesque nisl. Ut consequat ante eu augue iaculis efficitur. Nunc et pellentesque nulla, sit amet fermentum dolor. Vestibulum semper nisl quis dolor gravida, eu suscipit ipsum fermentum. In nec sapien sem. Phasellus vitae quam nulla. Aenean maximus a turpis eget tempus. Fusce at condimentum libero, nec porttitor leo. Quisque eleifend urna erat, quis egestas nulla rhoncus ut. Fusce elementum ac nulla a accumsan.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+  </body>
+</html>
