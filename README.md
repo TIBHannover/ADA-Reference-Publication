@@ -1,27 +1,24 @@
-# ADA Reference Publication
+# Benchmark Report
 
-A reference publication to establish requirements and standards for the ADA publishing pipeline that uses software Fidus Writer, Vivlioystyle, and GitHub/Lab Git and Pages.
+Unified HTML
 
-To establish a Reference Publication first output targets need to be identified. The output target enables validation criteria to be created and listed, for this research we call these 'Publication Ready Output' (PRO). Different PRO targets can be set.
+https://vivliostyle.vercel.app/#src=https://raw.githubusercontent.com/TIBHannover/ADA-Reference-Publication
+/main/uhtml/index.html&bookMode=true
 
-  1. PRO Target #1: Make outputs - Webbook, XHTML website via GitHub Pages; EPUB3.x; PDF Print, PDF screen, interoperable source all stored on GitHub.
+HTML multi-file
 
-## What will be evaluated in the reference documentation
+https://vivliostyle.vercel.app/#src=https://raw.githubusercontent.com/TIBHannover/ADA-Reference-Publication
+/main/html/index.html&bookMode=true
 
-  - Content encoding: Source, citations, and typesetting
-  - CSS Typesetting: Page Media CSS and CSS coding for multi-format output: Webbook, XHTML website via GitHub Pages; EPUB3.x; PDF Print, PDF screen
-  - PDF output
-  - Metadata: source, trade, library, and KG - Wikidata - easy distribution for outputs
-  - KG and PID use
-  - Packaging
-  - Webbook standards
-  - Interoperable source
+Unpacked epub - 
 
-## Roadmap
- 
- 1. Evaluate publication encoding for connecting Fidus Writer and Vivliostyle to make PRO Target 1 - Start 21.4.2021
+Using the OPF from epub
 
-## Glossary
+https://vivliostyle.vercel.app/#src=https://raw.githubusercontent.com/TIBHannover/ADA-Reference-Publication
+/main/epub/EPUB/document.opf&bookMode=true 
 
-  - Reference publication
-  - Publication Ready Output (PRO)
+Using the nav.xhtml from epub
+
+https://vivliostyle.vercel.app/#src=https://raw.githubusercontent.com/TIBHannover/ADA-Reference-Publication
+/main/epub/EPUB/document-nav.xhtml&bookMode=true
+
