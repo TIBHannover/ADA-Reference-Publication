@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@page {
+    size: 6in 9in;
+    @bottom-center {
+      content: counter(page);
+    }
+  }
+  @page :first {
+    @bottom-center {
+      content: normal;
+    }
+    @top-center {
+      content: normal;
+    }
+  }
+  figure img {
+    max-width: 100%;
+  }
+  @page :left {
+    @top-center {
+      content: env(pub-title);
+      font-family: "Open Sans", helvetica neue, arial, sans-serif;
+      font-weight: normal;
+      font-style: italic;
+      font-size: 9pt;
+      letter-spacing: 0.2pt;
+      word-spacing: 1px;
+   }
+  }
+  @page :right{
+    @top-center {
+      content: env(doc-title);
+      font-family: "Open Sans", helvetica neue, arial, sans-serif;
+      font-weight: normal;
+      font-style: italic;
+      font-size: 9pt;
+      letter-spacing: 0.2pt;
+      word-spacing: 1px;
+   }
+  }
+
+@page {
+  @bottom-center {
+    content: counter(page);
+    font-family: "Open Sans", helvetica neue, arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 9pt;
+    letter-spacing: 0.2pt;
+    word-spacing: 1px;
+  }
+}
+
+/* Extra pages */
+
+@page tocpage {
+  color: red;
+  @bottom-center {
+    content: none;
+  }
+}
+
+.tocpage {
+    page:tocpage;
+}
+
+@page frontmatter {
+  color: red;
+  @bottom-center {
+    content: counter(page, lower-roman)
+  }
+}
+
+.frontmatter, .sectionfrontmatter  {
+    page: frontmatter;
+}
+
+@page booktext {
+  color: blue;
+  @bottom-center {
+    content: counter-reset: page;
+  }
+}
+.sectionbooktext{
+    page:booktext;
+}
+
+@page :blank {
+	@bottom-left { content: normal; }
+  @bottom-center { content: normal; }
+	@bottom-right { content: normal; }
+	@top-center { content: normal; }
+  @top-left { content: normal; }
+  @top-right { content: normal; }
+}
+
+/* Title page */
+
+.titlepage {
+    text-align: center;
+}
+
+.user-contents h1.booktitle {
+    margin-bottom: 4em;
+}
+
+.user-contents h2.booksubtitle {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.user-contents h3.bookauthor {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.copyrightpage  {
+    display: none;
+}
+
+/* Start main */
+
+.user-contents {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    /*text-align: justify;*/
+    word-wrap: break-word;
+}
+
+.article-authors, .article-keywords {
+    line-height: 1.6em;
+}
+
+.article-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #003F97;
+    margin-top: 2em;
+}
+.article-title#_1_0 {
+  margin-top: 0em;
+} /* 1st article top of page*/
+
+.article-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.article-abstract {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.article-part.metadata {
+    margin-bottom: 20px;
+}
+
+.pagination-footnote:before,
+.pagination-footnote > * > *:first-child:before {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 9px;
+    text-align: left;
+    vertical-align: super;
+    line-height: 0;
+}
+
+.pagination-footnote > * > *:first-child:before {
+    margin-right: 5px;
+}
+
+.pagination-footnote > * > * {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.pagination-pagenumber {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pagination-footnotes {
+    margin-top: 25px;
+}
+
+.user-contents h1,
+.user-contents h2,
+.user-contents h3,
+.user-contents h4,
+.user-contents h5,
+.user-contents h6 {
+    margin-bottom: 15px;
+}
+
+.user-contents blockquote,
+.user-contents code,
+.user-contents ol,
+.user-contents ul {
+    margin-bottom: 20px;
+}
+.user-contents p {
+    margin-bottom: 0px;
+}
+
+.user-contents ol li p {
+    margin-bottom: 0;
+}
+
+.user-contents ul li p {
+    margin-bottom: 0px;
+}
+
+.footnote-content .user-contents  p {
+    margin-bottom: 10px;
+}
+
+.user-contents h1,
+.user-contents h2,
+.user-contents h3,
+.user-contents h4,
+.user-contents h5,
+.user-contents h6 {
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    line-height: 1.25em;
+    color: #001949;
+}
+
+.user-contents h1  {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.user-contents h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.user-contents h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.user-contents h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.user-contents h5 {
+    font-size: 14px;
+}
+
+
+.user-contents h6 {
+    font-size: 14px;
+    font-variant: small-caps;
+}
+
+
+.user-contents p,
+.user-contents ol li,
+.user-contents ul li {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.user-contents p {
+    font-weight: 400;
+}
+
+.user-contents strong {
+    font-weight: 700;
+}
+
+.user-contents em {
+    font-style: italic;
+}
+
+.user-contents ul,
+.user-contents ol {
+    padding-left: 15px;
+}
+
+.user-contents ul {
+  list-style-type: none;
+}
+
+.user-contents ul li:before {
+  content: '\2013';
+  position: absolute;
+  margin-left: -15px;
+}
+
+.user-contents ul li li::before {
+    content: "";
+}
+
+.user-contents ul li ul {
+  list-style-type: circle;
+}
+
+.user-contents ol {
+    list-style: decimal;
+}
+
+.user-contents blockquote {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 15px;
+    font-style: italic;
+    /*font-size: 13px;
+    line-height: 1.8em; */
+    border-left: 5px solid #003F97;
+}
+
+.user-contents code {
+    display: block;
+    font-family: "Courier New", Courier, mono-space;
+    font-size: 13px;
+    line-height: 1.75em;
+}
+
+/*.article-bibliography p {
+    font-size: 14px;
+    margin-bottom: 18px;
+}*/
+
+.equation {
+    font-size: 80%;
+}
+
+/******EXTRAS*****/
+
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+nav::before {
+  content: "Inhaltsverzeichnis";
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  line-height: 1.25em;
+  color: #001949;
+  display: block;
+  height: 40px;
+}
+
+nav {
+  margin: 2em 0em;
+  page-break-before: always;
+  page-break-after: always;
+  font-family: "Open Sans", helvetica neue, arial, sans-serif;
+}
+
+.user-contents nav ol {
+  list-style-type: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  display: inline-flex;
+  width: 100%;
+  text-decoration: none;
+  color: currentColor;
+  align-items: baseline;
+  border: none;
+  font-size: 9pt;
+}
+nav li a::before {
+  margin-right: 0.5em;
+  border-bottom: 1px dotted;
+  content: "";
+  order: 1;
+ flex: auto;
+}
+
+
+nav li ol ol {
+  display: none !important;
+}
+nav li a::after {
+ text-align: right;
+ content: target-counter(attr(href), page);
+ align-self: flex-end;
+ flex: none;
+ order: 2;
+}
+
+a, .csl-bib-body a {
+  color: #000;
+  text-decoration: none !important;
+  border-bottom: 1px solid #003F97;;
+}
+a.fn {
+    margin-left: 2px; /* adding extra nargin footnote number*/
+    border-bottom: none !important;
+
+}
+
+figure {
+    border: none;
+}
+
+/** footnotes **/
+.user-contents .fnlist p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 95%;
+    margin-bottom: 0px;
+}
+
+.article-bibliography, .csl-entry {
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+.user-contents h1.article-bibliography-header {
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 0;
+}
+.csl-bib-body {
+    padding-top: .5em;
+    padding-bottom: 0em;
+}
+
+caption {
+    margin: 10px 0px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+table {
+  margin: 0 auto;
+  width: 99% !important;
+  font-family: "Open Sans", helvetica neue, arial, sans-serif;
+  background-size: 8pt;
+  page-break-inside: avoid;
+  margin-top: 9pt;
+  margin-bottom: 18pt;
+  border-collapse: collapse;
+  /*border-bottom: 1pt solid #000;*/
+  border-left: 0;
+  border-right: 0;
+  text-align: left;
+  font-size: 8pt;
+}
+
+table td {
+  width: auto;
+  border-left: 0;
+  border-right: 0;
+  /*text-align: right;*/
+  border-bottom: 1px solid rgb(231,231,231);
+  padding: 0.5em;
+}
+table td a {
+ /*word-break: break-all; break words url*/
+ word-wrap: break-word;
+ overflow-wrap: break-word;
+}
+table td:last-of-type {
+  padding-right: 1em;
+}
+
+table th {
+  border-left: 0;
+  border-right: 0;
+  padding: 0em 1em;
+  font-size: 12px;
+  color: : black;
+  font-weight: 700;
+  font-style: italic;
+  background-color: rgb(241,248,250);
+  border-bottom: 2px solid #003F97;
+}
+table caption, figure figcaption {
+  font-size: 12px;
+  margin: .5em 0 .75em;
+  text-align: left;
+  font-style: normal;
+  font-weight: 300;
+}
+
+table caption .label, figcaption .label  {
+  font-weight: 600;
+}
+.user-contents table p,
+.user-contents table ul,
+.user-contents table li,
+.user-contents table ol {
+  font-size: 8pt;
+  font-family: "Open Sans", helvetica neue, arial, sans-serif;
+  text-align: left;
+  text-indent: 0;
+}
+.user-contents table p {
+    margin-bottom: 10px;
+}
