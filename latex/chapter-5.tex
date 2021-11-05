@@ -1,0 +1,631 @@
+% © 2021 The Author
+% https://creativecommons.org/publicdomain/zero/1.0/
+
+
+\documentclass{article}
+
+                
+\usepackage{titling}
+                
+\newcommand{\subtitle}[1]{%
+                    
+	\posttitle{%
+                        
+		\par\end{center}
+                        
+		\begin{center}\large#1\end{center}
+                        
+		\vskip 0.5em}%
+                }
+            
+                
+\usepackage{authblk}
+                
+\makeatletter
+                
+\let\@fnsymbol\@alph
+                
+\makeatother
+            
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{wrapfig}
+                
+\usepackage[backend=biber,hyperref=false,citestyle=authoryear,bibstyle=authoryear]{biblatex}
+                
+\bibliography{bibliography}
+            
+\usepackage{graphicx}
+                
+\usepackage{calc}
+                
+\newlength{\imgwidth}
+                
+\newcommand\scaledgraphics[2]{%
+                
+\settowidth{\imgwidth}{\includegraphics{#1}}%
+                
+\setlength{\imgwidth}{\minof{\imgwidth}{#2\textwidth}}%
+                
+\includegraphics[width=\imgwidth,height=\textheight,keepaspectratio]{#1}%
+                
+}
+            
+\usepackage{tabu}
+\usepackage{enumitem}
+\author{First Name 1 Last Name 1}
+\author{First Name 2 Lst Name 2}
+\affil{}
+
+
+\begin{document}
+
+\title{Text Section (Chapter 1)}
+\subtitle{Subtitle (inserted text): One of three test sections.}
+
+\maketitle
+
+\begin{abstract}
+
+
+Abstract: A document using Fidus Writer document features placed to represent common document use for example indenting lists.
+
+\end{abstract}
+
+
+Document set as US English. Doc style Comfy Elephant. Citation style CMOS Author Date.
+
+
+\subsection{What you will find in this section:}\label{H1003956}
+
+
+\begin{itemize}
+\item Use of optional Fidus Writer sections: Subtitle, Author (2), Abstract, Keywords
+
+
+\item Unordered list
+
+
+\item Indented unordered list
+
+
+\item Ordered list
+
+
+\item Ordered list with number start set
+
+
+\item Indented ordered list
+
+
+\item Text
+
+
+\item H1, H2, H3, H4, H5, H6
+
+
+\item Code formatting
+
+
+\item Images with captions, with no captions. Listed and not listed as figure. Image at 100\%, 50\%, 25\%. Using an image category.
+
+
+\item Tables, images as tables
+
+
+\item Math, image as math
+
+
+\item References
+
+
+\item Footnotes
+
+
+\item Web URLs; Internal Fidus Writer document links, Anchors
+
+
+\item Text formatting: bold, italic, underline
+
+
+\item Blockquote
+
+
+\item Copyright information using Fidus Writer document information setting
+
+
+\item Language setting
+
+
+\end{itemize}
+
+\subsection{Start of text}\label{H1581297}
+
+\texorpdfstring{\protect\hypertarget{H1581297}{}}{}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut enim diam. Aliquam erat volutpat. Ut commodo nibh ut maximus sodales. Mauris a enim non neque bibendum tincidunt at et eros. Nunc sed rutrum nibh. Nam vulputate pharetra velit euismod ullamcorper. Duis nec ligula nec magna facilisis luctus. Aliquam id accumsan leo. Etiam at velit vulputate, consequat leo id, imperdiet ante. Integer eget ornare turpis, eu convallis velit.
+
+
+\subsubsection{Lists}\label{H2736763}
+
+
+
+\subsubsection{Ordered list:}\label{H1860783}
+
+
+\begin{itemize}
+\item Nulla ac felis et dolor porttitor auctor nec eget orci.
+
+
+\item Integer aliquet purus maximus sem sagittis, vitae condimentum est tempus.
+
+
+\item Pellentesque sed ligula eget lacus scelerisque aliquet.
+
+
+\item Phasellus non nulla vitae sapien lobortis dictum.
+
+
+\item Etiam imperdiet risus in efficitur dictum.
+
+
+\end{itemize}
+
+\subsubsection{Indented Ordered list:}\label{H3077438}
+
+
+\begin{itemize}
+\item Nulla ac felis et dolor porttitor auctor nec eget orci.
+
+\begin{itemize}
+\item 1 indent: Integer aliquet purus maximus sem sagittis, vitae condimentum est tempus.
+
+\begin{itemize}
+\item 2 indent
+
+\begin{itemize}
+\item 3 indent
+
+\begin{itemize}
+\item 4 Indent
+
+
+\end{itemize}
+
+\end{itemize}
+
+\end{itemize}
+
+\end{itemize}
+
+\item Etiam imperdiet risus in efficitur dictum.
+
+
+\end{itemize}
+
+\subsubsection{Ordered list:}\label{H8642363}
+
+
+\begin{enumerate}
+\item Maecenas pulvinar vel metus in bibendum. 
+
+
+\item Mauris congue odio sit amet velit ultrices posuere. 
+
+
+\item Vivamus pellentesque porttitor ligula in volutpat. 
+
+
+\item Proin et porta mauris, sed sodales ligula. 
+
+
+\item Fusce gravida facilisis dui, ut tristique lacus volutpat nec. 
+
+
+\item Integer vitae sagittis mauris, non porttitor urna.  
+
+
+\end{enumerate}
+
+\subsubsection{Ordered list two - with start number set as 5 using the Fidus Writer setting:}\label{H6844251}
+
+
+\begin{enumerate}[start=5]
+\item Maecenas pulvinar vel metus in bibendum. 
+
+
+\item Mauris congue odio sit amet velit ultrices posuere. 
+
+
+\item Vivamus pellentesque porttitor ligula in volutpat. 
+
+
+\item Proin et porta mauris, sed sodales ligula. 
+
+
+\item Fusce gravida facilisis dui, ut tristique lacus volutpat nec. 
+
+
+\item Integer vitae sagittis mauris, non porttitor urna.
+
+
+\end{enumerate}
+
+\subsubsection{Indented ordered list}\label{H8647294}
+
+
+\begin{enumerate}
+\item Maecenas pulvinar vel metus in bibendum. 
+
+\begin{enumerate}
+\item Mauris congue odio sit amet velit ultrices posuere. 
+
+\begin{enumerate}
+\item Vivamus pellentesque porttitor ligula in volutpat. 
+
+\begin{enumerate}
+\item Proin et porta mauris, sed sodales ligula. 
+
+\begin{enumerate}
+\item Fusce gravida facilisis dui, ut tristique lacus volutpat nec.
+
+\begin{enumerate}
+\item  Integer vitae sagittis mauris, non porttitor urna. 
+
+\begin{enumerate}
+\item Sed tincidunt, dui ut ullamcorper tempor, dolor velit feugiat ex, et imperdiet mauris leo quis velit. 
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\subsubsection{Text}\label{H1635418}
+
+
+
+Integer lacinia dui in eleifend aliquam. Mauris eleifend eget justo vitae viverra. Nulla tempus maximus metus, ac fermentum velit placerat vel. Integer accumsan leo in nunc tincidunt placerat. Nunc sed nunc a risus semper condimentum. Aenean non egestas leo. Nulla id turpis varius, venenatis nibh et, ultrices nisi. Aliquam ultrices dapibus sapien a finibus. Vivamus in sollicitudin nibh. Proin eros quam, volutpat a facilisis sit amet, mattis eget lorem. Etiam scelerisque in felis eu sollicitudin. Integer vel vehicula risus. Morbi vestibulum est erat, faucibus molestie sapien sodales in.
+
+
+Praesent ornare massa in turpis sodales, id fringilla massa malesuada. Nam gravida urna sit amet neque sollicitudin aliquet. Praesent tristique magna vel pretium laoreet. Nam dictum at velit non euismod. Nam et elementum metus. Sed ac lacus vitae justo volutpat vulputate eget nec urna. Nulla facilisi. Quisque faucibus mollis venenatis.
+
+
+Mauris est felis, vestibulum eget ligula sit amet, scelerisque ornare tortor. Quisque auctor magna a sem iaculis, vitae volutpat nibh ornare. Nulla rutrum varius nibh vitae pharetra. Curabitur leo tellus, pharetra eget eros quis, posuere iaculis lorem. Nam iaculis augue neque, id tempus dui congue sed. Nullam eget ultrices purus. In et arcu id est egestas tincidunt. Proin vel fringilla nisi, non tempor purus.
+
+
+Aenean tincidunt arcu nisi, et cursus ligula facilisis eu. Sed ut leo lacus. Proin eget risus risus. Curabitur varius ligula eu mauris pulvinar molestie. Mauris fringilla risus magna. Vivamus lacus sem, placerat ut viverra non, rhoncus eget dolor. Fusce ut arcu rutrum dolor ornare hendrerit. Vestibulum ut porttitor tellus, a venenatis elit. Nullam sit amet rhoncus nibh, ac eleifend ante. Sed quis venenatis diam, eget euismod metus. Integer sed viverra erat. Pellentesque ac purus tellus. Nam id pretium tortor, vel tempor libero. Sed quis elementum risus. Curabitur est ante, posuere non purus ut, pharetra dictum lacus. Aliquam hendrerit sagittis neque, eu elementum odio lacinia non.
+
+
+Maecenas rutrum maximus arcu, at scelerisque nisi luctus suscipit. Nunc lobortis a arcu et fermentum. Etiam nulla nunc, elementum vitae luctus non, faucibus ut sem. Cras quis pellentesque nulla. Maecenas mauris turpis, volutpat vel tellus eu, condimentum ultrices ante. Suspendisse sit amet sem a nibh accumsan placerat. Sed gravida viverra vehicula. Aliquam cursus accumsan quam, ac tristique sapien pharetra in. Suspendisse eu leo varius massa vehicula pulvinar. Integer laoreet blandit purus, dapibus viverra nulla fringilla sed. Proin ut magna consequat, ultrices felis vel, commodo eros. Proin nisl quam, gravida ut risus ac, posuere fermentum augue. Cras pretium pulvinar nibh vel gravida. In erat eros, fringilla nec ipsum sodales, tempus egestas dolor. Pellentesque risus metus, vehicula id magna non, sodales molestie augue.
+
+
+\subsubsection{Headers and normal text styles}\label{H6880234}
+
+
+
+\section{Header 1}\label{H4490657}
+
+
+
+\subsection{Header 2}\label{H8419696}
+
+
+
+\subsubsection{Header 3}\label{H8916798}
+
+
+
+\subsubsection{Header 4}\label{H7079173}
+
+
+
+\subsubsection{Header 5}\label{H2991838}
+
+
+
+\subsubsection{Headers 6}\label{H2402273}
+
+
+
+Normal
+
+
+\subsubsection{Code style}\label{H2805208}
+
+
+
+Code format is greyed out?
+
+
+\subsubsection{Text formats}\label{H9315252}
+
+
+
+\textbf{Bold}
+
+
+\emph{Italic}
+
+
+\emph{\textbf{Bold italic}}
+
+
+Underline is greyed out?
+
+
+\subsubsection{Images}\label{H607067}
+
+
+
+Images with captions, with no captions. Image at 100\%, 50\%, 25\%
+
+
+\subsubsection{Image with caption, as figure}\label{H415836}
+
+
+
+Included copyright information, 100\% size
+
+\begin{figure}
+\scaledgraphics{2112cd94-9504-4ac8-a467-c996ced73408.jpg}{1}
+\caption*{Figure 1: Reference needed FR, CC 2.0}\label{F46521}
+\end{figure}
+
+
+
+
+
+\subsubsection{Image with caption, not figure}\label{H9577977}
+
+
+
+With caption, no listing, 50\%, left. Copyright information.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+\scaledgraphics{d2133ec1-3584-435f-ae11-585197fe8785.jpg}{0.5}
+\caption*{Citation needed EN}\label{F35988861}
+\end{wrapfigure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Image with caption, as photo, no caption}\label{H166321}
+
+
+
+Right align, 25\%, with copyright
+
+\begin{wrapfigure}{r}{0.25\textwidth}
+\scaledgraphics{4610ab2c-b384-45c6-bea8-45345ff23871.png}{0.25}
+\caption*{Photo 1: Citation needed CN}\label{F40137711}
+\end{wrapfigure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Images}\label{H1357540}
+
+
+
+Some images to allow for counting in figures and photos. Three per type in this one document.
+
+
+Figure A
+
+\begin{figure}
+\scaledgraphics{00f266b7-70bc-4fc2-b492-8007f2f7dc22.png}{0.5}
+\caption*{Figure 2: Assamese}\label{F50654351}
+\end{figure}
+
+
+Figure B
+
+\begin{figure}
+\scaledgraphics{e70cc696-28fd-4fe8-90b7-5f7c3e6566d2.png}{0.5}
+\caption*{Figure 3: Marathi}\label{F77741651}
+\end{figure}
+
+
+Figure C
+
+\begin{figure}
+\scaledgraphics{5ef3b987-0b9b-4379-bf0c-706280992017.png}{0.5}
+\caption*{Figure 4: Polish}\label{F27601541}
+\end{figure}
+
+
+Photo A
+
+\begin{figure}
+\scaledgraphics{ee55764a-2062-4b77-902d-dfadac68e94f.jpg}{0.5}
+\caption*{Photo 2: Jimmy Wales}\label{F46756271}
+\end{figure}
+
+
+Photo B
+
+\begin{figure}
+\scaledgraphics{87e04269-ad23-4246-a913-35cb2083205e.jpg}{0.5}
+\caption*{Photo 3: March for Science}\label{F2133221}
+\end{figure}
+
+
+Photo C
+
+\begin{figure}
+\scaledgraphics{36448392-2aec-4123-9310-a7e9d375d438.jpg}{0.5}
+\caption*{Photo 4}\label{F91410751}
+\end{figure}
+
+
+
+
+
+\subsubsection{Tables}\label{H8876846}
+
+
+\begin{table}
+\caption*{Table 1: Table with caption and listed, header on}\label{T66652301}
+
+\begin{tabu} to \textwidth { |X|X|X|X| }
+\hline
+
+
+
+Column 1 & Column 2 & Column 3 & Column 4
+ \\
+
+
+Row 1 & data & data & data
+ \\
+
+
+Row 2 & data & data & data
+ \\
+
+
+Row 3 & data & data & data
+ \\
+
+
+Row 4 & data & data & data
+ \\
+
+
+Row 5 & data & data & data
+ \\
+
+
+Row 6 & data & data & data
+ \\
+\hline
+
+\end{tabu}\end{table}
+
+
+\begin{center}
+\begin{table}
+\caption*{Table 2: A complex table}\label{F8966261}
+\scaledgraphics{9e9b653f-c96b-4f61-94e3-84c0be199871.jpg}{0.5}
+\end{table}
+
+
+\end{center}
+
+
+\subsubsection{Math}\label{H225619}
+
+
+
+Equation:
+
+
+$9\notin3\mathfrak{\Re }55\mathfrak{\Im }\ne\partial$
+
+
+Equation as image:
+
+\begin{figure}
+\scaledgraphics{c15490e4-8fc0-4e3f-b49c-bbe51655b8d2.jpg}{0.5}
+\caption*{Equation 1:  Abacus Lübeck, Schleswig-Holstein}\label{F9394491}
+\end{figure}
+
+
+\subsubsection{References}\label{H7100180}
+
+
+
+Nam eleifend augue sit amet faucibus accumsan. Sed felis mi, rutrum sed diam id, ultrices sodales dui. Sed consectetur sagittis lectus vitae interdum. Nulla finibus, quam id suscipit ultrices, dui purus commodo mi, at faucibus dolor sapien eu urna. Quisque cursus, velit vel sollicitudin pellentesque, magna justo euismod tellus, molestie mollis enim ligula id magna.\autocite{https://doi.org/10.15463/rec.799967328} Maecenas varius orci ligula, et posuere massa aliquet vel. Integer pellentesque interdum convallis. Pellentesque lobortis nulla eu ligula sagittis, sed eleifend neque ultricies. Etiam venenatis arcu diam, non pharetra arcu iaculis sit amet.\autocite{Williams_2020} Sed eros odio, pellentesque sed tellus quis, aliquet ullamcorper turpis. Quisque eu aliquam sapien. Curabitur dapibus, metus sit amet varius venenatis, nisi odio lacinia tortor, non elementum felis mauris vehicula diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec ligula condimentum hendrerit. Curabitur posuere tortor id odio ullamcorper, sed viverra nisi fringilla.\autocite{https://doi.org/10.15463/rec.612893388}
+
+
+Nulla eget rhoncus urna. Fusce ultricies quam vel tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum venenatis lacus sit amet vestibulum aliquam. Suspendisse lobortis nisl sed libero gravida rhoncus. Suspendisse vestibulum eros ac mi tempor, vitae faucibus odio bibendum. Nam viverra mauris auctor blandit euismod. Vestibulum dapibus justo elementum lobortis fermentum.
+
+
+\subsubsection{Footnotes}\label{H7237703}
+
+
+
+Nam eleifend augue sit amet faucibus accumsan. Sed felis mi, rutrum sed diam id, ultrices sodales dui. Sed consectetur sagittis lectus vitae interdum. Nulla finibus, quam id suscipit ultrices, dui purus commodo mi, at faucibus dolor sapien eu urna. Quisque cursus, velit vel sollicitudin pellentesque, magna justo euismod tellus, molestie mollis enim ligula id magna.\footnote{A single paragraph note.} Maecenas varius orci ligula, et posuere massa aliquet vel. Integer pellentesque interdum convallis. Pellentesque lobortis nulla eu ligula sagittis, sed eleifend neque ultricies. Etiam venenatis arcu diam, non pharetra arcu iaculis sit amet. Sed eros odio, pellentesque sed tellus quis, aliquet ullamcorper turpis.\footnote{A double paragraph note.
+
+
+Paragraph two.} Quisque eu aliquam sapien. Curabitur dapibus, metus sit amet varius venenatis, nisi odio lacinia tortor, non elementum felis mauris vehicula diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec ligula condimentum hendrerit. Curabitur posuere tortor id odio ullamcorper, sed viverra nisi fringilla.\footnote{A note with a citation in it?\autocite{https://doi.org/10.15463/rec.612893388}}
+
+
+Nulla eget rhoncus urna. Fusce ultricies quam vel tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum venenatis lacus sit amet vestibulum aliquam. Suspendisse lobortis nisl sed libero gravida rhoncus. Suspendisse vestibulum eros ac mi tempor, vitae faucibus odio bibendum. Nam viverra mauris auctor blandit euismod. Vestibulum dapibus justo elementum lobortis fermentum.
+
+
+\subsubsection{Web URLs; Internal Fidus Writer document links, Anchors}\label{H4364111}
+
+
+
+URL The historian \href{https://www.marcusrediker.com/}{Marcus Rediker}.
+
+
+Internal link in the document to a \hyperlink{H1581297}{header anchor} and to an \hyperlink{A746704}{anchor}.
+
+
+Anchor
+
+
+\subsubsection{Blockquote}\label{H758728}
+
+
+\begin{quote}
+
+
+
+Here below is the full list of ten books that have shaped my life – one basketball book, one joke book, one autobiography, three novels, and four history books. One never knows which books will change your life and therein lies one of the greatest joys of reading. \href{https://t.co/biMVo4ylZL}{https://t.co/biMVo4ylZL}
+
+
+\end{quote}
+
+
+\subsubsection{Copyright information using Fidus Writer document information setting}\label{H3595888}
+
+
+
+Document set to CC0, 2021, The Author.
+
+
+\subsubsection{Language settings}\label{H5763006}
+
+
+
+Document set to US English.
+
+
+\printbibliography[title={Bibliography}]
+\end{document}
