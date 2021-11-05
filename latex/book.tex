@@ -1,0 +1,82 @@
+\documentclass[11pt]{book}
+
+                
+\usepackage{titling}
+                
+\newcommand{\subtitle}[1]{%
+                    
+	\posttitle{%
+                        
+		\par\end{center}
+                        
+		\begin{center}\large#1\end{center}
+                        
+		\vskip 0.5em}%
+                }
+            
+                
+\usepackage{authblk}
+                
+\makeatletter
+                
+\let\@fnsymbol\@alph
+                
+\makeatother
+            
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{wrapfig}
+                
+\usepackage[backend=biber,hyperref=false,citestyle=authoryear,bibstyle=authoryear]{biblatex}
+                
+\bibliography{bibliography}
+            
+\usepackage{graphicx}
+                
+\usepackage{calc}
+                
+\newlength{\imgwidth}
+                
+\newcommand\scaledgraphics[2]{%
+                
+\settowidth{\imgwidth}{\includegraphics{#1}}%
+                
+\setlength{\imgwidth}{\minof{\imgwidth}{#2\textwidth}}%
+                
+\includegraphics[width=\imgwidth,height=\textheight,keepaspectratio]{#1}%
+                
+}
+            
+\usepackage{tabu}
+\usepackage{enumitem}
+\usepackage{docmute}
+\title{Benchmark Report}
+\author{Author A Name}
+\begin{document}
+\maketitle
+\def\title#1{\chapter{#1}}
+\tableofcontents
+
+\part{section-frontmatter}
+        \input{chapter-1}
+        
+        \input{chapter-2}
+        
+        \input{chapter-3}
+        
+        \input{chapter-4}
+        
+\part{section-booktext}
+        \input{chapter-5}
+        
+        \input{chapter-6}
+        
+        \input{chapter-7}
+        
+\part{section-backmatter}
+        \input{chapter-8}
+        
+
+
+\printbibliography[title={Bibliography}]
+\end{document}
