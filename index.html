@@ -100,11 +100,15 @@
           }
           if (currentNode) {
             const id = currentNode.id
-            const active = document.querySelector('.sidebar-nav li.active')
-            if (active) {
-              active.classList.remove('active')
+            const linkNode = document.querySelector(`.sidebar-nav a[href="#${id}"]`)
+            if (linkNode) {
+              const active = document.querySelector('.sidebar-nav li.active')
+              if (active) {
+                active.classList.remove('active')
+              }
+              linkNode.parentNode.classList.add('active')
             }
-            document.querySelector(`.sidebar-nav a[href="#${id}"]`).parentNode.classList.add('active')
+
           }
         }
         window.document.addEventListener(
