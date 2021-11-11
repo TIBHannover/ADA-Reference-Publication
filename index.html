@@ -83,7 +83,6 @@
 
         // Mark current item on scroll
         function onscroll() {
-          console.log('scroll')
           const positions = Array.from(
             document.querySelectorAll('#main *[id]')
           )
@@ -107,7 +106,6 @@
             }
             document.querySelector(`.sidebar-nav a[href="#${id}"]`).parentNode.classList.add('active')
           }
-          console.log(currentNode)
         }
         window.document.addEventListener(
           'scroll',
