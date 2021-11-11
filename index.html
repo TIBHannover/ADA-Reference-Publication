@@ -34,6 +34,18 @@
     }
   </style>
   <script>
+    function throttle(fn, wait) {
+      // Source: https://www.sitepoint.com/throttle-scroll-events/
+      let time = Date.now()
+      return function() {
+        if ((time + wait - Date.now()) < 0) {
+          fn()
+          time = Date.now()
+        }
+      }
+    }
+  </script>
+  <script>
     // Load all data from uhtml page
     fetch('uhtml/index.html').then(
       response => response.text()
@@ -62,13 +74,48 @@
         const sideBarNavNode = document.body.querySelector('div.sidebar-nav')
         sideBarNavNode.innerHTML += copyrightPageNode.innerHTML
         copyrightPageNode.parentNode.removeChild(copyrightPageNode)
-
         // Copy body and header content
         Array.from(doc.head.children).forEach(node => document.head.appendChild(node))
         const contentNode = document.body.querySelector('#main')
         Array.from(doc.body.children).forEach(node => contentNode.appendChild(node))
         // Enable toggle sidebar button
         document.querySelector('.sidebar-toggle-button').addEventListener('click', () => document.body.classList.toggle('close'))
+
+        // Mark current item on scroll
+        function onscroll() {
+          console.log('scroll')
+          const positions = Array.from(
+            document.querySelectorAll('#main *[id]')
+          )
+          let currentNode
+          for (i=0;i<positions.length;i++) {
+            const node = positions[i]
+            const top = node.getClientRects()[0]?.top
+            if (top > window.innerHeight) {
+              break
+            }
+            currentNode = node
+            if (top > 0) {
+              break
+            }
+          }
+          if (currentNode) {
+            const id = currentNode.id
+            const active = document.querySelector('.sidebar-nav li.active')
+            if (active) {
+              active.classList.remove('active')
+            }
+            document.querySelector(`.sidebar-nav a[href="#${id}"]`).parentNode.classList.add('active')
+          }
+          console.log(currentNode)
+        }
+        window.document.addEventListener(
+          'scroll',
+          throttle(onscroll, 1000)
+        )
+
+
+
       }
     )
   </script>
@@ -83,7 +130,7 @@
       </div>
     </button>
     <aside class="sidebar">
-      <h1 class="app-name"><a class="app-name-link" data-nosearch="" href="/"></a></h1>
+      <h1 class="app-name"><a class="app-name-link" data-nosearch="" href="#top"></a></h1>
       <div class="sidebar-nav">
         <ul>
           <li><p><strong>Navigation</strong></p></li>
