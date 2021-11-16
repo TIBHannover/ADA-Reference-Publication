@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="assets/favicon/favicon.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="Simple">
+  <link rel="stylesheet" href="assets/css/theme-custom.css">
+
+  <!-- Alternate Stylesheets -->
+  <link rel="stylesheet alternate" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css" title="Defaults">
+  <link rel="stylesheet alternate" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css" title="Simple Dark">
+
+  <!-- Font Awesome Stylesheets -->
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
+
+    <!-- Other -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/style.css" />
+
+
+  <style>
+    nav li a::before {
+      border-bottom: none !important; /* Removing dots in toc */
+    }
+    a.app-name-link {
+      border-bottom: none !important;
+    }
+  </style>
+  <script>
+    function throttle(fn, wait) {
+      // Source: https://www.sitepoint.com/throttle-scroll-events/
+      let time = Date.now()
+      return function() {
+        if ((time + wait - Date.now()) < 0) {
+          fn()
+          time = Date.now()
+        }
+      }
+    }
+  </script>
+  <script>
+    // Load all data from uhtml page
+    fetch('uhtml/index.html').then(
+      response => response.text()
+    ).then(
+      string => {
+        const parser = new DOMParser()
+        const doc = parser.parseFromString(string, 'text/html')
+        doc.head.querySelectorAll('link').forEach(link => {
+          const href = link.getAttribute('href')
+          link.setAttribute('href', `uhtml/${href}`)
+        })
+        doc.body.querySelectorAll('img').forEach(img => {
+          const src = img.getAttribute('src')
+          img.setAttribute('src', `uhtml/${src}`)
+        })
+        // Copy title/subtitle to sidebar
+        const title = doc.body.querySelector('h1.booktitle').innerHTML
+        const subtitle = doc.body.querySelector('h2.booksubtitle').innerHTML
+        document.querySelector('.app-name-link').innerHTML = `${title}<br>${subtitle}`
+        // Copy TOC to sidebar
+        const mainTocNode = doc.body.querySelector('nav[role=doc-toc]')
+        const tocNode = document.body.querySelector('#toc')
+        tocNode.innerHTML += mainTocNode.innerHTML
+        // Move copyright page content to sidebar
+        const copyrightPageNode = doc.body.querySelector('div.copyrightpage')
+        const sideBarNavNode = document.body.querySelector('div.sidebar-nav')
+        sideBarNavNode.innerHTML += copyrightPageNode.innerHTML
+        copyrightPageNode.parentNode.removeChild(copyrightPageNode)
+        // Copy body and header content
+        Array.from(doc.head.children).forEach(node => document.head.appendChild(node))
+        const contentNode = document.body.querySelector('#main')
+        Array.from(doc.body.children).forEach(node => contentNode.appendChild(node))
+        // Enable toggle sidebar button
+        document.querySelector('.sidebar-toggle-button').addEventListener('click', () => document.body.classList.toggle('close'))
+
+        // Mark current item on scroll
+        function onscroll() {
+          const positions = Array.from(
+            document.querySelectorAll('#main *[id]')
+          )
+          let currentNode
+          for (i=0;i<positions.length;i++) {
+            const node = positions[i]
+            const top = node.getClientRects()[0]?.top
+            if (top > window.innerHeight) {
+              break
+            }
+            currentNode = node
+            if (top > 0) {
+              break
+            }
+          }
+          if (currentNode) {
+            const id = currentNode.id
+            const linkNode = document.querySelector(`.sidebar-nav a[href="#${id}"]`)
+            if (linkNode) {
+              const active = document.querySelector('.sidebar-nav li.active')
+              if (active) {
+                active.classList.remove('active')
+              }
+              linkNode.parentNode.classList.add('active')
+            }
+
+          }
+        }
+        window.document.addEventListener(
+          'scroll',
+          throttle(onscroll, 1000)
+        )
+
+
+
+      }
+    )
+  </script>
+</head>
+<body class="ready ready-fix sticky">
+  <main>
+    <button class="sidebar-toggle" aria-label="Menu">
+      <div class="sidebar-toggle-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    <aside class="sidebar">
+      <h1 class="app-name"><a class="app-name-link" data-nosearch="" href="#top"></a></h1>
+      <div class="sidebar-nav">
+        <ul>
+          <li><p><strong>Navigation</strong></p></li>
+          <li id="toc">
+            <p><a href="#main" title="Table of contents">Table of contents</a></p>
+          </li>
+        </ul>
+        <hr>
+    </div>
+    </aside>
+    <section class="content">
+      <article class="markdown-section" id="main"></article>
+    </section>
+  </main>
+</body>
+</html>
