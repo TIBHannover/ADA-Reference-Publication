@@ -157,7 +157,7 @@
 
       if (setup.vivlioURL) {
         const link = document.querySelector("div.sources a.vivlio")
-        link.href = `${setup.vivlioURL}#src=${new URL("/uhtml/index.html", window.location.href).href}&bookMode=true`
+        link.href = `${setup.vivlioURL}#src=${new URL("uhtml/index.html", window.location.href).href}&bookMode=true`
         link.classList.remove('disabled')
       }
 
