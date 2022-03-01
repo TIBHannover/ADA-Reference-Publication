@@ -2,17 +2,6 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <script>
-
-    const setup = {
-      // Outside URLS. Set to false if no link should be created.
-      repoURL: "https://www.github.com/johanneswilm/ADA-Reference-Publication/",
-      repoBranch: "main",
-      vivlioURL: "https://vivliostyle.vercel.app/",
-      podURL: "https://www.walmart.com/ip/Nicaragua-Back-from-the-Dead-An-Anthropological-View-of-the-Sandinista-Movement-in-the-Early-21st-Century-Paperback/750757774"
-    }
-
-  </script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="icon" href="assets/favicon/favicon.png">
@@ -148,7 +137,9 @@
       }
     )
     // Set links for other output formats.
-    window.addEventListener('load', function() {
+    fetch('setup.json').then(
+      response => response.json()
+    ).then(setup => {
       if (setup.podURL) {
         const link = document.querySelector("div.sources a.pod")
         link.href = setup.podURL
@@ -168,51 +159,50 @@
       }
       if (setup.repoURL && setup.repoBranch) {
         const link = document.querySelector("div.sources a.uhtml")
-        link.href = `${setup.repoURL}tree/${setup.repoBranch}/epub`
+        link.href = `${setup.repoURL}tree/${setup.repoBranch}/uhtml`
       }
-
+      // Check which other sources exist and enable links
+      fetch('book.epub', {
+        method: "HEAD"
+      }).then(res => {
+        if (res.ok) {
+          document.querySelector("div.sources a.epub").classList.remove('disabled')
+        }
+      }).catch(err => {})
+      fetch('epub/EPUB/document.opf', {
+        method: "HEAD"
+      }).then(res => {
+        if (res.ok) {
+          const link = document.querySelector("div.sources a.epub-source")
+          if (setup.repoURL && setup.repoBranch) {
+            link.href = `${setup.repoURL}tree/${setup.repoBranch}/epub`
+          }
+          link.classList.remove('disabled')
+        }
+      }).catch(err => {})
+      fetch('html/index.html', {
+        method: "HEAD"
+      }).then(res => {
+        if (res.ok) {
+          const link = document.querySelector("div.sources a.html")
+          if (setup.repoURL && setup.repoBranch) {
+            link.href = `${setup.repoURL}tree/${setup.repoBranch}/html`
+          }
+          link.classList.remove('disabled')
+        }
+      }).catch(err => {})
+      fetch('latex/book.tex', {
+        method: "HEAD"
+      }).then(res => {
+        if (res.ok) {
+          const link = document.querySelector("div.sources a.latex")
+          if (setup.repoURL && setup.repoBranch) {
+            link.href = `${setup.repoURL}tree/${setup.repoBranch}/latex`
+          }
+          link.classList.remove('disabled')
+        }
+      }).catch(err => {})
     })
-    // Check which other sources exist and enable links
-    fetch('book.epub', {
-      method: "HEAD"
-    }).then(res => {
-      if (res.ok) {
-        document.querySelector("div.sources a.epub").classList.remove('disabled')
-      }
-    }).catch(err => {})
-    fetch('epub/EPUB/document.opf', {
-      method: "HEAD"
-    }).then(res => {
-      if (res.ok) {
-        const link = document.querySelector("div.sources a.epub-source")
-        if (setup.repoURL && setup.repoBranch) {
-          link.href = `${setup.repoURL}tree/${setup.repoBranch}/epub`
-        }
-        link.classList.remove('disabled')
-      }
-    }).catch(err => {})
-    fetch('html/index.html', {
-      method: "HEAD"
-    }).then(res => {
-      if (res.ok) {
-        const link = document.querySelector("div.sources a.html")
-        if (setup.repoURL && setup.repoBranch) {
-          link.href = `${setup.repoURL}tree/${setup.repoBranch}/html`
-        }
-        link.classList.remove('disabled')
-      }
-    }).catch(err => {})
-    fetch('latex/book.tex', {
-      method: "HEAD"
-    }).then(res => {
-      if (res.ok) {
-        const link = document.querySelector("div.sources a.latex")
-        if (setup.repoURL && setup.repoBranch) {
-          link.href = `${setup.repoURL}tree/${setup.repoBranch}/latex`
-        }
-        link.classList.remove('disabled')
-      }
-    }).catch(err => {})
   </script>
 </head>
 <body class="ready ready-fix sticky">
