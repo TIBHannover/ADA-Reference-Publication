@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <script>
 
-   const setup = {
-     // Outside URLS. Set to false if no link should be created.
-     repoURL: "https://www.github.com/johanneswilm/ADA-Reference-Publication/",
-     repoBranch: "main",
-     vivlioURL: "https://vivliostyle.vercel.app/",
-     podURL: "https://www.walmart.com/ip/Nicaragua-Back-from-the-Dead-An-Anthropological-View-of-the-Sandinista-Movement-in-the-Early-21st-Century-Paperback/750757774"
-   }
+    const setup = {
+      // Outside URLS. Set to false if no link should be created.
+      repoURL: "https://www.github.com/johanneswilm/ADA-Reference-Publication/",
+      repoBranch: "main",
+      vivlioURL: "https://vivliostyle.vercel.app/",
+      podURL: "https://www.walmart.com/ip/Nicaragua-Back-from-the-Dead-An-Anthropological-View-of-the-Sandinista-Movement-in-the-Early-21st-Century-Paperback/750757774"
+    }
 
   </script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -71,8 +71,6 @@
         }
       }
     }
-  </script>
-  <script>
     // Load all data from uhtml page
     fetch('uhtml/index.html').then(
       response => response.text()
@@ -116,7 +114,7 @@
             document.querySelectorAll('#main *[id]')
           )
           let currentNode
-          for (i=0;i<positions.length;i++) {
+          for (i = 0; i < positions.length; i++) {
             const node = positions[i]
             const top = node.getClientRects()[0]?.top
             if (top > window.innerHeight) {
@@ -150,62 +148,70 @@
       }
     )
     // Set links for other output formats.
-    window.addEventListener('load', function () {
-        if (setup.podURL) {
-            const link = document.querySelector("div.sources a.pod")
-            link.href = setup.podURL
-            link.classList.remove('disabled')
-        }
+    window.addEventListener('load', function() {
+      if (setup.podURL) {
+        const link = document.querySelector("div.sources a.pod")
+        link.href = setup.podURL
+        link.classList.remove('disabled')
+      }
 
-        if (setup.vivlioURL) {
-            const link = document.querySelector("div.sources a.vivlio")
-            link.href = `${setup.vivlioURL}#src=${new URL("/uhtml/index.html", window.location.href).href}&bookMode=true`
-            link.classList.remove('disabled')
-        }
+      if (setup.vivlioURL) {
+        const link = document.querySelector("div.sources a.vivlio")
+        link.href = `${setup.vivlioURL}#src=${new URL("/uhtml/index.html", window.location.href).href}&bookMode=true`
+        link.classList.remove('disabled')
+      }
 
-        if (setup.repoURL) {
-            const link = document.querySelector("div.sources a.repo")
-            link.href = setup.repoURL
-            link.classList.remove('disabled')
-        }
-        if (setup.repoURL && setup.repoBranch) {
-              const link = document.querySelector("div.sources a.uhtml")
-            link.href = `${setup.repoURL}tree/${setup.repoBranch}/epub`
-        }
+      if (setup.repoURL) {
+        const link = document.querySelector("div.sources a.repo")
+        link.href = setup.repoURL
+        link.classList.remove('disabled')
+      }
+      if (setup.repoURL && setup.repoBranch) {
+        const link = document.querySelector("div.sources a.uhtml")
+        link.href = `${setup.repoURL}tree/${setup.repoBranch}/epub`
+      }
 
     })
     // Check which other sources exist and enable links
-    fetch('book.epub', {method: "HEAD"}).then(res => {
-        if (res.ok) {
-            document.querySelector("div.sources a.epub").classList.remove('disabled')
-        }
+    fetch('book.epub', {
+      method: "HEAD"
+    }).then(res => {
+      if (res.ok) {
+        document.querySelector("div.sources a.epub").classList.remove('disabled')
+      }
     }).catch(err => {})
-    fetch('epub/EPUB/document.opf', {method: "HEAD"}).then(res => {
-        if (res.ok) {
-            const link = document.querySelector("div.sources a.epub-source")
-            if (setup.repoURL && setup.repoBranch) {
-                link.href = `${setup.repoURL}tree/${setup.repoBranch}/epub`
-            }
-            link.classList.remove('disabled')
+    fetch('epub/EPUB/document.opf', {
+      method: "HEAD"
+    }).then(res => {
+      if (res.ok) {
+        const link = document.querySelector("div.sources a.epub-source")
+        if (setup.repoURL && setup.repoBranch) {
+          link.href = `${setup.repoURL}tree/${setup.repoBranch}/epub`
         }
+        link.classList.remove('disabled')
+      }
     }).catch(err => {})
-    fetch('html/index.html', {method: "HEAD"}).then(res => {
-        if (res.ok) {
-            const link = document.querySelector("div.sources a.html")
-            if (setup.repoURL && setup.repoBranch) {
-                link.href = `${setup.repoURL}tree/${setup.repoBranch}/html`
-            }
-            link.classList.remove('disabled')
+    fetch('html/index.html', {
+      method: "HEAD"
+    }).then(res => {
+      if (res.ok) {
+        const link = document.querySelector("div.sources a.html")
+        if (setup.repoURL && setup.repoBranch) {
+          link.href = `${setup.repoURL}tree/${setup.repoBranch}/html`
         }
+        link.classList.remove('disabled')
+      }
     }).catch(err => {})
-    fetch('latex/book.tex', {method: "HEAD"}).then(res => {
-        if (res.ok) {
-            const link = document.querySelector("div.sources a.latex")
-            if (setup.repoURL && setup.repoBranch) {
-                link.href = `${setup.repoURL}tree/${setup.repoBranch}/latex`
-            }
-            link.classList.remove('disabled')
+    fetch('latex/book.tex', {
+      method: "HEAD"
+    }).then(res => {
+      if (res.ok) {
+        const link = document.querySelector("div.sources a.latex")
+        if (setup.repoURL && setup.repoBranch) {
+          link.href = `${setup.repoURL}tree/${setup.repoBranch}/latex`
         }
+        link.classList.remove('disabled')
+      }
     }).catch(err => {})
   </script>
 </head>
