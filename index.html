@@ -32,6 +32,22 @@
     a.app-name-link {
       border-bottom: none !important;
     }
+    div.sources {
+      font-size: small;
+      top: 10px;
+      right: 10px;
+      position: absolute;
+    }
+    div.sources a {
+      display: inline-block;
+      margin-right: 8px;
+    }
+    div.sources .disabled {
+      display: none;
+    }
+    #toc ol li ol li ol {
+      display: none;
+    }
   </style>
   <script>
     function throttle(fn, wait) {
@@ -44,8 +60,6 @@
         }
       }
     }
-  </script>
-  <script>
     // Load all data from uhtml page
     fetch('uhtml/index.html').then(
       response => response.text()
@@ -65,6 +79,8 @@
         const title = doc.body.querySelector('h1.booktitle').innerHTML
         const subtitle = doc.body.querySelector('h2.booksubtitle').innerHTML
         document.querySelector('.app-name-link').innerHTML = `${title}<br>${subtitle}`
+        // Use title for ebook download name
+        document.querySelector('div.sources a.epub').setAttribute('download', `${title}.epub`)
         // Copy TOC to sidebar
         const mainTocNode = doc.body.querySelector('nav[role=doc-toc]')
         const tocNode = document.body.querySelector('#toc')
@@ -87,7 +103,7 @@
             document.querySelectorAll('#main *[id]')
           )
           let currentNode
-          for (i=0;i<positions.length;i++) {
+          for (i = 0; i < positions.length; i++) {
             const node = positions[i]
             const top = node.getClientRects()[0]?.top
             if (top > window.innerHeight) {
@@ -120,6 +136,73 @@
 
       }
     )
+    // Set links for other output formats.
+    fetch('setup.json').then(
+      response => response.json()
+    ).then(setup => {
+      if (setup.podURL) {
+        const link = document.querySelector("div.sources a.pod")
+        link.href = setup.podURL
+        link.classList.remove('disabled')
+      }
+
+      if (setup.vivlioURL) {
+        const link = document.querySelector("div.sources a.vivlio")
+        link.href = `${setup.vivlioURL}#src=${new URL("uhtml/index.html", window.location.href).href}&bookMode=true`
+        link.classList.remove('disabled')
+      }
+
+      if (setup.repoURL) {
+        const link = document.querySelector("div.sources a.repo")
+        link.href = setup.repoURL
+        link.classList.remove('disabled')
+      }
+      if (setup.repoURL && setup.repoBranch) {
+        const link = document.querySelector("div.sources a.uhtml")
+        link.href = `${setup.repoURL}tree/${setup.repoBranch}/uhtml`
+      }
+      // Check which other sources exist and enable links
+      fetch('book.epub', {
+        method: "HEAD"
+      }).then(res => {
+        if (res.ok) {
+          document.querySelector("div.sources a.epub").classList.remove('disabled')
+        }
+      }).catch(err => {})
+      fetch('epub/EPUB/document.opf', {
+        method: "HEAD"
+      }).then(res => {
+        if (res.ok) {
+          const link = document.querySelector("div.sources a.epub-source")
+          if (setup.repoURL && setup.repoBranch) {
+            link.href = `${setup.repoURL}tree/${setup.repoBranch}/epub`
+          }
+          link.classList.remove('disabled')
+        }
+      }).catch(err => {})
+      fetch('html/index.html', {
+        method: "HEAD"
+      }).then(res => {
+        if (res.ok) {
+          const link = document.querySelector("div.sources a.html")
+          if (setup.repoURL && setup.repoBranch) {
+            link.href = `${setup.repoURL}tree/${setup.repoBranch}/html`
+          }
+          link.classList.remove('disabled')
+        }
+      }).catch(err => {})
+      fetch('latex/book.tex', {
+        method: "HEAD"
+      }).then(res => {
+        if (res.ok) {
+          const link = document.querySelector("div.sources a.latex")
+          if (setup.repoURL && setup.repoBranch) {
+            link.href = `${setup.repoURL}tree/${setup.repoBranch}/latex`
+          }
+          link.classList.remove('disabled')
+        }
+      }).catch(err => {})
+    })
   </script>
 </head>
 <body class="ready ready-fix sticky">
@@ -144,6 +227,17 @@
     </div>
     </aside>
     <section class="content">
+      <div class="sources">
+        <label>Other formats:</label>
+        <a class="pod disabled" href="#">Order a copy</a>
+        <a class="vivlio disabled" href="#">Vivliostyle</a>
+        <a class="repo disabled" href="#">Repository</a>
+        <a class="latex disabled" href="latex">LaTeX</a>
+        <a class="epub disabled" href="book.epub">EPUB</a>
+        <a class="epub-source disabled" href="epub">EPUB Source</a>
+        <a class="html disabled" href="html">HTML</a>
+        <a class="uhtml" href="uhtml">Unified HTML</a>
+      </div>
       <article class="markdown-section" id="main"></article>
     </section>
   </main>
