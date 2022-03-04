@@ -79,8 +79,9 @@
         const title = doc.body.querySelector('h1.booktitle')?.innerHTML || ''
         const subtitle = doc.body.querySelector('h2.booksubtitle')?.innerHTML || ''
         document.querySelector('.app-name-link').innerHTML = `${title}<br>${subtitle}`
-        // Use title for ebook download name
+        // Use title for ebook + pdf download name
         document.querySelector('div.sources a.epub').setAttribute('download', `${title}.epub`)
+        document.querySelector('div.sources a.pdf').setAttribute('download', `${title}.pdf`)
         // Copy TOC to sidebar
         const mainTocNode = doc.body.querySelector('nav[role=doc-toc]')
         const tocNode = document.body.querySelector('#toc')
@@ -169,6 +170,13 @@
           document.querySelector("div.sources a.epub").classList.remove('disabled')
         }
       }).catch(err => {})
+      fetch('book.pdf', {
+        method: "HEAD"
+      }).then(res => {
+        if (res.ok) {
+          document.querySelector("div.sources a.pdf").classList.remove('disabled')
+        }
+      }).catch(err => {})
       fetch('epub/EPUB/document.opf', {
         method: "HEAD"
       }).then(res => {
@@ -232,8 +240,9 @@
         <a class="pod disabled" href="#">Order a copy</a>
         <a class="vivlio disabled" href="#">Vivliostyle</a>
         <a class="repo disabled" href="#">Repository</a>
-        <a class="latex disabled" href="latex">LaTeX</a>
         <a class="epub disabled" href="book.epub">EPUB</a>
+        <a class="pdf disabled" href="book.pdf">PDF</a>
+        <a class="latex disabled" href="latex">LaTeX</a>
         <a class="epub-source disabled" href="epub">EPUB Source</a>
         <a class="html disabled" href="html">HTML</a>
         <a class="uhtml" href="uhtml">Unified HTML</a>
