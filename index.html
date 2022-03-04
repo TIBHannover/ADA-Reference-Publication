@@ -76,8 +76,8 @@
           img.setAttribute('src', `uhtml/${src}`)
         })
         // Copy title/subtitle to sidebar
-        const title = doc.body.querySelector('h1.booktitle').innerHTML
-        const subtitle = doc.body.querySelector('h2.booksubtitle').innerHTML
+        const title = doc.body.querySelector('h1.booktitle')?.innerHTML || ''
+        const subtitle = doc.body.querySelector('h2.booksubtitle')?.innerHTML || ''
         document.querySelector('.app-name-link').innerHTML = `${title}<br>${subtitle}`
         // Use title for ebook download name
         document.querySelector('div.sources a.epub').setAttribute('download', `${title}.epub`)
