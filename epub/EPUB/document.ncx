@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ncx xmlns:ncx="http://www.daisy.org/z3986/2005/ncx/" xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="de">
   <head>
-    <meta name="dtb:fidus" content="100" />
+    <meta name="dtb:fidus" content="91" />
   </head>
   <docTitle>
-    <text>Benchmark Report</text>
+    <text>ADA Benchmark Template</text>
   </docTitle>
   <navMap>
 
@@ -18,18 +18,18 @@
       <content src="titlepage.xhtml#title" />
     </navPoint>
     <navPoint id="t0-1">
-      <navLabel><text>section-frontmatter</text></navLabel>
+      <navLabel><text>Front Matter</text></navLabel>
       <content src="document-1.xhtml" />
       <navPoint id="t_1_0-1">
         <navLabel><text>Copyright Page</text></navLabel>
         <content src="document-1.xhtml#_1_0" />
       </navPoint>
       <navPoint id="t_2_0-2">
-        <navLabel><text>Acknowledgements</text></navLabel>
+        <navLabel><text>Contributors</text></navLabel>
         <content src="document-2.xhtml#_2_0" />
       </navPoint>
       <navPoint id="t_3_0-3">
-        <navLabel><text>Contributors</text></navLabel>
+        <navLabel><text>Acknowledgements</text></navLabel>
         <content src="document-3.xhtml#_3_0" />
       </navPoint>
       <navPoint id="t_4_0-4">
@@ -38,7 +38,7 @@
       </navPoint>
     </navPoint>
     <navPoint id="t0-5">
-      <navLabel><text>section-booktext</text></navLabel>
+      <navLabel><text>Chapters</text></navLabel>
       <content src="document-5.xhtml" />
       <navPoint id="t_5_0-5">
         <navLabel><text>Text Section (Chapter 1)</text></navLabel>
@@ -430,7 +430,7 @@
       </navPoint>
     </navPoint>
     <navPoint id="t0-8">
-      <navLabel><text>section-backmatter</text></navLabel>
+      <navLabel><text>Back Matter</text></navLabel>
       <content src="document-8.xhtml" />
       <navPoint id="t_8_0-8">
         <navLabel><text>Back Matter</text></navLabel>
