@@ -4,7 +4,7 @@
     <meta name="dtb:fidus" content="93" />
   </head>
   <docTitle>
-    <text>ADA Template 080322</text>
+    <text>ADA Book Template v1.0</text>
   </docTitle>
   <navMap>
 
@@ -23,6 +23,30 @@
       <navPoint id="t_1_0-1">
         <navLabel><text>About the Book</text></navLabel>
         <content src="document-1.xhtml#_1_0" />
+        <navPoint id="tH353005-1">
+          <navLabel><text>Title page</text></navLabel>
+          <content src="document-1.xhtml#H353005" />
+        </navPoint>
+        <navPoint id="tH5488342-1">
+          <navLabel><text>Copyright page</text></navLabel>
+          <content src="document-1.xhtml#H5488342" />
+        </navPoint>
+        <navPoint id="tH8928019-1">
+          <navLabel><text>Description</text></navLabel>
+          <content src="document-1.xhtml#H8928019" />
+        </navPoint>
+        <navPoint id="tH344358-1">
+          <navLabel><text>Contributors</text></navLabel>
+          <content src="document-1.xhtml#H344358" />
+        </navPoint>
+        <navPoint id="tH3962672-1">
+          <navLabel><text>Acknowledgements</text></navLabel>
+          <content src="document-1.xhtml#H3962672" />
+        </navPoint>
+        <navPoint id="tH4408518-1">
+          <navLabel><text>Foreword</text></navLabel>
+          <content src="document-1.xhtml#H4408518" />
+        </navPoint>
       </navPoint>
     </navPoint>
     <navPoint id="t0-2">
@@ -31,14 +55,102 @@
       <navPoint id="t_2_0-2">
         <navLabel><text>Chapter 1</text></navLabel>
         <content src="document-2.xhtml#_2_0" />
+        <navPoint id="tH5353869-2">
+          <navLabel><text>Text, images, references, and footnotes</text></navLabel>
+          <content src="document-2.xhtml#H5353869" />
+          <navPoint id="tH6448135-2">
+            <navLabel><text>Image</text></navLabel>
+            <content src="document-2.xhtml#H6448135" />
+          </navPoint>
+          <navPoint id="tH153323-2">
+            <navLabel><text>References</text></navLabel>
+            <content src="document-2.xhtml#H153323" />
+          </navPoint>
+          <navPoint id="tH5724220-2">
+            <navLabel><text>Footnotes</text></navLabel>
+            <content src="document-2.xhtml#H5724220" />
+          </navPoint>
+        </navPoint>
       </navPoint>
       <navPoint id="t_3_0-3">
         <navLabel><text>Chapter 2</text></navLabel>
         <content src="document-3.xhtml#_3_0" />
+        <navPoint id="tH3821851-3">
+          <navLabel><text>Tables and calculations</text></navLabel>
+          <content src="document-3.xhtml#H3821851" />
+          <navPoint id="tH3716596-3">
+            <navLabel><text>Tables</text></navLabel>
+            <content src="document-3.xhtml#H3716596" />
+          </navPoint>
+          <navPoint id="tH8566701-3">
+            <navLabel><text>Calculations</text></navLabel>
+            <content src="document-3.xhtml#H8566701" />
+          </navPoint>
+        </navPoint>
       </navPoint>
       <navPoint id="t_4_0-4">
         <navLabel><text>Chapter 3</text></navLabel>
         <content src="document-4.xhtml#_4_0" />
+        <navPoint id="tH3039027-4">
+          <navLabel><text>Lists, and headers and styles</text></navLabel>
+          <content src="document-4.xhtml#H3039027" />
+          <navPoint id="tH5537956-4">
+            <navLabel><text>Lists</text></navLabel>
+            <content src="document-4.xhtml#H5537956" />
+            <navPoint id="tH4082896-4">
+              <navLabel><text>Ordered list</text></navLabel>
+              <content src="document-4.xhtml#H4082896" />
+            </navPoint>
+            <navPoint id="tH4354781-4">
+              <navLabel><text>Ordered list indented</text></navLabel>
+              <content src="document-4.xhtml#H4354781" />
+            </navPoint>
+          </navPoint>
+          <navPoint id="tH1193054-4">
+            <navLabel><text>Unordered list</text></navLabel>
+            <content src="document-4.xhtml#H1193054" />
+          </navPoint>
+          <navPoint id="tH2723379-4">
+            <navLabel><text>Headers and styles</text></navLabel>
+            <content src="document-4.xhtml#H2723379" />
+          </navPoint>
+        </navPoint>
+        <navPoint id="tH5078208-4">
+          <navLabel><text>Header 1</text></navLabel>
+          <content src="document-4.xhtml#H5078208" />
+          <navPoint id="tH7613580-4">
+            <navLabel><text>Header 2</text></navLabel>
+            <content src="document-4.xhtml#H7613580" />
+            <navPoint id="tH7133996-4">
+              <navLabel><text>Header 3</text></navLabel>
+              <content src="document-4.xhtml#H7133996" />
+              <navPoint id="tH9722296-4">
+                <navLabel><text>Header 4</text></navLabel>
+                <content src="document-4.xhtml#H9722296" />
+                <navPoint id="tH7389617-4">
+                  <navLabel><text>Header 5</text></navLabel>
+                  <content src="document-4.xhtml#H7389617" />
+                  <navPoint id="tH1367103-4">
+                    <navLabel><text>Header 6</text></navLabel>
+                    <content src="document-4.xhtml#H1367103" />
+                  </navPoint>
+                </navPoint>
+              </navPoint>
+            </navPoint>
+            <navPoint id="tH7176378-4">
+              <navLabel><text>Blockquote</text></navLabel>
+              <content src="document-4.xhtml#H7176378" />
+            </navPoint>
+            <navPoint id="tH6762577-4">
+              <navLabel><text>Bold and italic</text></navLabel>
+              <content src="document-4.xhtml#H6762577" />
+            </navPoint>
+            <navPoint id="tH8807675-4">
+              <navLabel><text>Horizontal line</text></navLabel>
+              <content src="document-4.xhtml#H8807675" />
+            </navPoint>
+          </navPoint>
+        </navPoint>
       </navPoint>
     </navPoint>
     <navPoint id="t0-5">
