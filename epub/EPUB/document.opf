@@ -2,13 +2,13 @@
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="fidus" xml:lang="en-GB" prefix="cc: http://creativecommons.org/ns#">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="fidus">93</dc:identifier>
-    <dc:title>ADA Template 080322</dc:title>
+    <dc:title>ADA Book Template v1.0</dc:title>
     <dc:creator>
       The Author
     </dc:creator>
     <dc:language>en-GB</dc:language>
-    <meta property="dcterms:modified">2022-03-08T14:57:35Z</meta>
-    <dc:date>2022-03-08</dc:date>
+    <meta property="dcterms:modified">2022-03-09T14:26:07Z</meta>
+    <dc:date>2022-03-09</dc:date>
     <dc:rights>Creative Commons</dc:rights>
     <dc:publisher>The Publisher</dc:publisher>
     <dc:subject>book</dc:subject>
@@ -27,6 +27,7 @@
     <item id="nav" href="document-nav.xhtml" properties="nav" media-type="application/xhtml+xml" />
     <item id="copyright" href="copyright.xhtml" media-type="application/xhtml+xml" />
     <item id="cover-image" properties="cover-image" href="e1d0482b-48cf-4a26-b320-898874375236.jpg" media-type="image/jpeg" />
+    <item id="img1" href="images/e5c5f202-b1e2-4b15-98f9-a9082d225a6b.jpg" media-type="image/jpeg" />
     <item id="font0" href="css/media/NotoSerif-Italic.ttf" media-type="font/sfnt" />
     <item id="font1" href="css/media/NotoSerif-BoldItalic.ttf" media-type="font/sfnt" />
     <item id="font2" href="css/media/NotoSerif-Regular.ttf" media-type="font/sfnt" />
@@ -38,6 +39,49 @@
     <item id="font8" href="css/media/NotoSerif-Bold.ttf" media-type="font/sfnt" />
     <item id="css0" href="css/document.css" media-type="text/css" />
     <item id="css1" href="css/ada001.css" media-type="text/css" />
+    <item id="mathlive-0" href="css/mathlive.css" media-type="text/css" />
+    <item id="mathlive-1" href="css/media/KaTeX_Script-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-2" href="css/media/KaTeX_Caligraphic-Bold.woff2" media-type="font/woff2" />
+    <item id="mathlive-3" href="css/media/KaTeX_Main-BoldItalic.woff" media-type="font/woff" />
+    <item id="mathlive-4" href="css/media/KaTeX_AMS-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-5" href="css/media/KaTeX_Caligraphic-Bold.woff" media-type="font/woff" />
+    <item id="mathlive-6" href="css/media/KaTeX_SansSerif-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-7" href="css/media/KaTeX_Math-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-8" href="css/media/KaTeX_Size1-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-9" href="css/media/KaTeX_Size3-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-10" href="css/media/KaTeX_Size4-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-11" href="css/media/KaTeX_Typewriter-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-12" href="css/media/KaTeX_SansSerif-Bold.woff2" media-type="font/woff2" />
+    <item id="mathlive-13" href="css/media/KaTeX_Math-BoldItalic.woff" media-type="font/woff" />
+    <item id="mathlive-14" href="css/media/KaTeX_Math-BoldItalic.woff2" media-type="font/woff2" />
+    <item id="mathlive-15" href="css/media/KaTeX_Caligraphic-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-16" href="css/media/KaTeX_AMS-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-17" href="css/media/KaTeX_SansSerif-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-18" href="css/media/KaTeX_Typewriter-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-19" href="css/media/KaTeX_Main-Bold.woff2" media-type="font/woff2" />
+    <item id="mathlive-20" href="css/media/KaTeX_Main-Bold.woff" media-type="font/woff" />
+    <item id="mathlive-21" href="css/media/KaTeX_Fraktur-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-22" href="css/media/KaTeX_Math-Italic.woff" media-type="font/woff" />
+    <item id="mathlive-23" href="css/media/KaTeX_SansSerif-Bold.woff" media-type="font/woff" />
+    <item id="mathlive-24" href="css/media/KaTeX_Caligraphic-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-25" href="css/media/KaTeX_SansSerif-Italic.woff" media-type="font/woff" />
+    <item id="mathlive-26" href="css/media/KaTeX_SansSerif-Italic.woff2" media-type="font/woff2" />
+    <item id="mathlive-27" href="css/media/KaTeX_Fraktur-Bold.woff2" media-type="font/woff2" />
+    <item id="mathlive-28" href="css/media/KaTeX_Size1-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-29" href="css/media/KaTeX_Main-BoldItalic.woff2" media-type="font/woff2" />
+    <item id="mathlive-30" href="css/media/KaTeX_Math-Italic.woff2" media-type="font/woff2" />
+    <item id="mathlive-31" href="css/media/KaTeX_Fraktur-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-32" href="css/media/KaTeX_Size2-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-33" href="css/media/KaTeX_Main-Regular.woff" media-type="font/woff" />
+    <item id="mathlive-34" href="css/media/KaTeX_Main-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-35" href="css/media/KaTeX_Math-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-36" href="css/media/KaTeX_Main-Italic.woff" media-type="font/woff" />
+    <item id="mathlive-37" href="css/media/KaTeX_Size3-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-38" href="css/media/KaTeX_Main-Italic.woff2" media-type="font/woff2" />
+    <item id="mathlive-39" href="css/media/KaTeX_Script-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-40" href="css/media/KaTeX_Size2-Regular.woff2" media-type="font/woff2" />
+    <item id="mathlive-41" href="css/media/KaTeX_Fraktur-Bold.woff" media-type="font/woff" />
+    <item id="mathlive-42" href="css/media/KaTeX_Size4-Regular.woff" media-type="font/woff" />
 
     <!-- ncx included for 2.0 reading system compatibility: -->
     <item id="ncx" href="document.ncx" media-type="application/x-dtbncx+xml" />
