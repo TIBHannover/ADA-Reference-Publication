@@ -2,18 +2,18 @@
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="fidus" xml:lang="en-GB" prefix="cc: http://creativecommons.org/ns#">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="fidus">93</dc:identifier>
-    <dc:title>ADA Book Template v1.0</dc:title>
+    <dc:title>ADA Reference Publication and Template v1.0</dc:title>
     <dc:creator>
       The Author
     </dc:creator>
     <dc:language>en-GB</dc:language>
-    <meta property="dcterms:modified">2022-03-09T14:26:07Z</meta>
-    <dc:date>2022-03-09</dc:date>
-    <dc:rights>Creative Commons</dc:rights>
+    <meta property="dcterms:modified">2022-03-11T09:53:06Z</meta>
+    <dc:date>2022-03-11</dc:date>
+    <dc:rights>Creative Commons Share-Alike 4.0</dc:rights>
     <dc:publisher>The Publisher</dc:publisher>
     <dc:subject>book</dc:subject>
     <dc:subject>rapid publishing</dc:subject>
-    <dc:subject>single soure</dc:subject>
+    <dc:subject>single source</dc:subject>
     <dc:subject>multi-format</dc:subject>
   </metadata>
   <manifest>
