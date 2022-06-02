@@ -1,4 +1,4 @@
-# Benchmark Book
+# Reference Publication
 
 ## UHTML for GitHub Pages (testing)
 
