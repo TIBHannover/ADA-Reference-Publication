@@ -57,15 +57,15 @@
 
 
 @page {
-  size: 159mm 229mm;
+  size: 152mm 229mm;
   margin-top: 20mm;
   margin-bottom: 20mm;
 }
 
 @page :first {
-  size: 159mm 229mm;
+  size: 152mm 229mm;
   background: url(https://procip.github.io/publichealthstrategie/html/css/media/cover.jpg) ;
-background-size: 159mm 229mm;
+background-size: size: size: 152mm 229mm;
   display: flex;
   margin-top: 300mm;
   color: #001668 ;
